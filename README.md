@@ -13,7 +13,7 @@ Unlike generic AI chatbots that often hallucinate or provide geographically inac
 
 **Actionable Output Generation:** Bypasses dense academic explanations in favor of tactical next steps, clear power dynamics, and structured procedural guidance.
 
-**Domain Versatility:** Currently handles rent control, tenant eviction, motor accident claims (MACT), alimony disputes, and institutional fee disputes.
+**Domain Versatility:** Engineered to handle a wide spectrum of everyday legal challenges. The system dynamically adapts its reasoning to diverse areas of Indian law.
 
 
 ## System Architecture
