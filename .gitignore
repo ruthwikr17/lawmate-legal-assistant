@@ -1,0 +1,12 @@
+# Large data
+storage/
+db/
+
+# Python
+__pycache__/
+*.pycs
+
+.env
+
+# OS
+.DS_Store

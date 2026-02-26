@@ -1,0 +1,6 @@
+sentence-transformers
+chromadb
+pdfplumber
+langchain
+tiktoken
+langchain-text-splitters
