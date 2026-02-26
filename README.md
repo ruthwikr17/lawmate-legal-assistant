@@ -60,16 +60,26 @@ lawmate/
 └── README.md
 ```
 
-## Roadmap & Future Extensions
+## Roadmap & Development Phases
 The system is actively being refined by Ruthvik at Sphoorthy Engineering College to shift from a functional prototype to a comprehensive legal assistant. Immediate priorities include:
 
-- **Advanced Response Calibration:** Tuning the LLM for higher authority, enforcing "burden of proof" framing, and eliminating AI-style transitions.
+**Phase 1: The Core RAG Engine (Completed)**
+* Jurisdiction-aware retrieval logic.
+* Semantic chunking and metadata filtering via ChromaDB.
+* LLM orchestration with custom tone and formatting constraints.
 
-- **Workflow Automation Modes:** Adding guided, step-by-step procedures for drafting consumer complaints, FIRs, and MACT claims.
+**Phase 2: Backend API Development (Next)**
+* Wrapping the core Python scripts into a robust backend framework (Node.js).
+* Setting up API endpoints for query ingestion, document uploads, and session management.
 
-- **Confidence Scoring:** Implementing a dual-score system for retrieval accuracy and legal coverage confidence.
+**Phase 3: Interactive Web Application (Upcoming)**
+* Developing a clean, public-facing frontend UI (React or Next.js).
+* Allowing users to input queries, upload legal notices for OCR, and receive live formatted advice directly in their browser.
 
-- **Ecosystem Expansion:** Scaling the corpus to encompass all Indian states, adding multi-lingual support (Telugu/Hindi), and migrating to a Streamlit web interface.
+**Phase 4: Advanced Features (Future)**
+* **Workflow Automation:** Guided procedures for drafting consumer complaints, FIRs, and MACT claims, and other legal procedures.
+* **Confidence Scoring:** Implementing a dual-score system for retrieval accuracy and legal coverage confidence.
+* **Ecosystem Expansion:** Scaling the corpus to encompass all Indian states and adding multi-lingual support (Telugu/Hindi, etc).
 
 
 ## Disclaimer
