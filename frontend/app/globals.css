@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Core Colors */
+  --bg-app: #0A0A0A; /* Deep Black */
+  --bg-sidebar: #121212; /* Charcoal Grey */
+  --bg-panel: #1A1A1A; /* Lighter Charcoal */
+  --bg-hover: #242424;
+  
+  --text-primary: #EDEDED; /* Soft White */
+  --text-secondary: #A1A1AA; /* Soft Grey */
+  --text-muted: #71717A;
+  
+  --accent-teal: #FFFFFF; /* High Contrast White */
+  --accent-blue: #A1A1AA; /* Medium Grey */
+  --accent-hover: #FFFFFF; /* Pure White Hover */
+  
+  --border-light: #27272A;
+  --border-focus: #FFFFFF;
+  
+  --text-inverse: #0A0A0A; /* Black text for white backgrounds */
+  
+  /* Utilities */
+  --radius-sm: 0.4rem;
+  --radius-md: 0.6rem;
+  --radius-lg: 0.8rem;
+  --radius-xl: 1rem;
+  
+  /* Core Spacing & Typography */
+  --gap-sm: 0.75rem;
+  --gap-md: 1rem;
+  --gap-lg: 1.5rem;
+  --gap-xl: 2rem;
+  
+  --p-sm: 0.75rem;
+  --p-md: 1rem;
+  --p-lg: 1.5rem;
+  --p-xl: 2rem;
+
+  line-height: 1.6;
+}
+
+.glass-panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-light);
+  padding: var(--p-lg);
+  border-radius: 2rem;
+}
+
+[data-theme="light"] {
+  --bg-app: #F0F2F5; /* FB Grey Background */
+  --bg-sidebar: #FFFFFF; /* Pure White */
+  --bg-panel: #FFFFFF; /* Pure White */
+  --bg-hover: #E4E6EB; /* Light Grey Hover */
+  
+  --text-primary: #1C1E21; /* Deep Dark Text */
+  --text-secondary: #606770; /* Medium Grey Text */
+  --text-muted: #8A8D91; /* Light Grey Text */
+  
+  --accent-teal: #1877F2; /* FB Blue */
+  --accent-blue: #E4E6EB; /* Muted bg for accents */
+  --accent-hover: #166FE5; /* Darker Blue Hover */
+  
+  --border-light: #CED0D4; /* Subtle Border */
+  --border-focus: #1877F2; /* Blue Focus */
+  
+  --text-inverse: #FFFFFF; /* Pure White for blue accents */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--text-primary);
+  color: var(--bg-app);
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+/* Base App Shell */
+.app-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Typography Helpers */
+.text-xs { font-size: 0.75rem; line-height: 1rem; }
+.text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.text-base { font-size: 1rem; line-height: 1.5rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+.text-2xl { font-size: 1.5rem; line-height: 2rem; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+
+/* Custom Scrollbar for sleekness */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Glassmorphism & Soft Shadows */
+.glass-panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-light);
+  padding: var(--p-lg);
+}
+
+.shadow-subtle {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Shared UI Components */
+.btn-primary {
+  background-color: var(--accent-teal);
+  color: var(--text-inverse);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-hover);
+}
+
+/* Form inputs */
+.input-base {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-light);
+  color: var(--text-primary);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 0.75rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.input-base:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 1px var(--border-focus);
+}
+
+.input-base::placeholder {
+  color: var(--text-muted);
+}

@@ -1,0 +1,1138 @@
+[
+    {
+        "id": "c1",
+        "title": "E-commerce Refund Delay",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Recovery for failed returns/defects.",
+        "steps": []
+    },
+    {
+        "id": "c2",
+        "title": "Insurance Claim Rejection",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Appeal against arbitrary rejection.",
+        "steps": []
+    },
+    {
+        "id": "c3",
+        "title": "Medical Negligence",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Compensation for diagnostic error.",
+        "steps": []
+    },
+    {
+        "id": "c4",
+        "title": "Warranty Denial",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Action against denied repairs.",
+        "steps": []
+    },
+    {
+        "id": "c5",
+        "title": "False Advertisement",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Action for misleading packaging.",
+        "steps": []
+    },
+    {
+        "id": "c6",
+        "title": "Airline Baggage Loss",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Claiming damages for lost luggage.",
+        "steps": []
+    },
+    {
+        "id": "c7",
+        "title": "Real Estate Delay",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Interest for delayed possession.",
+        "steps": []
+    },
+    {
+        "id": "c8",
+        "title": "Bank Fraud (Unauthorized)",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Limiting liability for fraud txn.",
+        "steps": []
+    },
+    {
+        "id": "c9",
+        "title": "Ed-Tech Course Refund",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Refund for misleading platform claims.",
+        "steps": []
+    },
+    {
+        "id": "c10",
+        "title": "Electricity Overbilling",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Challenging excessive bills.",
+        "steps": []
+    },
+    {
+        "id": "c11",
+        "title": "Telecom MNP Block",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Challenging blocked SIM porting.",
+        "steps": []
+    },
+    {
+        "id": "c12",
+        "title": "Hotel Service Charge",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Refusal to pay tips as tax.",
+        "steps": []
+    },
+    {
+        "id": "c13",
+        "title": "Food Adulteration",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Action for unsafe delivery.",
+        "steps": []
+    },
+    {
+        "id": "c14",
+        "title": "School Fee Hike",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Challenging 15% annual hike.",
+        "steps": []
+    },
+    {
+        "id": "c15",
+        "title": "Gym Membership Exit",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Exit for non-functional gym.",
+        "steps": []
+    },
+    {
+        "id": "c16",
+        "title": "Packaged Water MRP",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Reporting MRP violations.",
+        "steps": []
+    },
+    {
+        "id": "c17",
+        "title": "Mutual Fund Mis-selling",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Action for wrong risk profiling.",
+        "steps": []
+    },
+    {
+        "id": "c18",
+        "title": "Loan Harassment Stop",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Stop agent calls post 7 PM.",
+        "steps": []
+    },
+    {
+        "id": "c19",
+        "title": "Car Scrap Value",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Getting fair price for old car.",
+        "steps": []
+    },
+    {
+        "id": "c20",
+        "title": "Courier Service Loss",
+        "persona": "consumer",
+        "category": "High Utility",
+        "desc": "Claim for lost high-value items.",
+        "steps": []
+    },
+    {
+        "id": "e21",
+        "title": "Unpaid Salary Recovery",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Legal demand for arrears.",
+        "steps": []
+    },
+    {
+        "id": "e22",
+        "title": "Gratuity Claim Notice",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Demand after 5 years service.",
+        "steps": []
+    },
+    {
+        "id": "e23",
+        "title": "Arbitrary Termination",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Challenging firing without notice.",
+        "steps": []
+    },
+    {
+        "id": "e24",
+        "title": "Workplace POSH Claim",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Formal sexual harassment report.",
+        "steps": []
+    },
+    {
+        "id": "e25",
+        "title": "EPF Withdrawal Issue",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Action for rejected PF claims.",
+        "steps": []
+    },
+    {
+        "id": "e26",
+        "title": "Notice Period Buyout",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Recovering pay in lieu of notice.",
+        "steps": []
+    },
+    {
+        "id": "e27",
+        "title": "Relieving Letter Block",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Action for blocked certification.",
+        "steps": []
+    },
+    {
+        "id": "e28",
+        "title": "Maternity Leave Pay",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Action for pay-cuts during leave.",
+        "steps": []
+    },
+    {
+        "id": "e29",
+        "title": "Work-site Injury Comp",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Claim for medical/disability costs.",
+        "steps": []
+    },
+    {
+        "id": "e30",
+        "title": "Permanent Status Claim",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Action for regularizing contract.",
+        "steps": []
+    },
+    {
+        "id": "e31",
+        "title": "VRS Settlement Dispute",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Dispute over promised VRS pay.",
+        "steps": []
+    },
+    {
+        "id": "e32",
+        "title": "Bonus Withholding",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Demand for statutory bonuses.",
+        "steps": []
+    },
+    {
+        "id": "e33",
+        "title": "Shift Harassment",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Protecting against night shifts.",
+        "steps": []
+    },
+    {
+        "id": "e34",
+        "title": "PF Contribution Theft",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "FIR for non-deposit of PF.",
+        "steps": []
+    },
+    {
+        "id": "e35",
+        "title": "Trade Union Rights",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Action against victimized leaders.",
+        "steps": []
+    },
+    {
+        "id": "e36",
+        "title": "Overtime Pay Demand",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Recovering 2x pay for OT.",
+        "steps": []
+    },
+    {
+        "id": "e37",
+        "title": "Consultant Mis-class",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Proving employee vs consultant.",
+        "steps": []
+    },
+    {
+        "id": "e38",
+        "title": "Workplace Bullying",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Formal grievance for harassment.",
+        "steps": []
+    },
+    {
+        "id": "e39",
+        "title": "Full & Final Delay",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Escalation for 45-day delay.",
+        "steps": []
+    },
+    {
+        "id": "e40",
+        "title": "Apprentice Stipend",
+        "persona": "employee",
+        "category": "High Utility",
+        "desc": "Action for unpaid training fees.",
+        "steps": []
+    },
+    {
+        "id": "t41",
+        "title": "Deposit Recovery",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Legal notice for refund.",
+        "steps": []
+    },
+    {
+        "id": "t42",
+        "title": "Illegal Eviction Stay",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Court stay against ouster.",
+        "steps": []
+    },
+    {
+        "id": "t43",
+        "title": "Utility Cut Restoration",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Order for water/electricity.",
+        "steps": []
+    },
+    {
+        "id": "t44",
+        "title": "Society Maintenance",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Challenging overcharge.",
+        "steps": []
+    },
+    {
+        "id": "t45",
+        "title": "Structural Repair",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Forcing major repairs.",
+        "steps": []
+    },
+    {
+        "id": "t46",
+        "title": "Privacy Breach",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Preventing unannounced entry.",
+        "steps": []
+    },
+    {
+        "id": "t47",
+        "title": "Rent Receipt Block",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Forcing landlord to issue bills.",
+        "steps": []
+    },
+    {
+        "id": "t48",
+        "title": "Commercial Lease Force",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Rent waiver for lockdown.",
+        "steps": []
+    },
+    {
+        "id": "t49",
+        "title": "PG Refund Conflict",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Action for kept tokens.",
+        "steps": []
+    },
+    {
+        "id": "t50",
+        "title": "Brokerage Dispute",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Refund for false show.",
+        "steps": []
+    },
+    {
+        "id": "t51",
+        "title": "Society Pet Ban",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Allowing pets in flat.",
+        "steps": []
+    },
+    {
+        "id": "t52",
+        "title": "Rent Arrears Defense",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Challenging false arrears.",
+        "steps": []
+    },
+    {
+        "id": "t53",
+        "title": "Wear & Tear Costs",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Objecting to painting costs.",
+        "steps": []
+    },
+    {
+        "id": "t54",
+        "title": "Sub-letting Defense",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Proving guests vs sub-tenants.",
+        "steps": []
+    },
+    {
+        "id": "t55",
+        "title": "Renewal Refusal",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Tenant-at-sufferance rights.",
+        "steps": []
+    },
+    {
+        "id": "t56",
+        "title": "Inventory Damage",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Challenging asset bills.",
+        "steps": []
+    },
+    {
+        "id": "t57",
+        "title": "Facility Access",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Restoring GYM/Pool access.",
+        "steps": []
+    },
+    {
+        "id": "t58",
+        "title": "Notice shortening",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Exiting for relocation.",
+        "steps": []
+    },
+    {
+        "id": "t59",
+        "title": "AC Maintenance",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Fixing AC in summer.",
+        "steps": []
+    },
+    {
+        "id": "t60",
+        "title": "Advance Token Refund",
+        "persona": "tenant",
+        "category": "High Utility",
+        "desc": "Recovery post deal-fail.",
+        "steps": []
+    },
+    {
+        "id": "w61",
+        "title": "Maintenance 125",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Monthly support claim.",
+        "steps": []
+    },
+    {
+        "id": "w62",
+        "title": "Domestic Violence",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Protection/Residence orders.",
+        "steps": []
+    },
+    {
+        "id": "w63",
+        "title": "Stridhan Recovery",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Return of gold/jewelry.",
+        "steps": []
+    },
+    {
+        "id": "w64",
+        "title": "Mutual Divorce",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "6-month waiver separation.",
+        "steps": []
+    },
+    {
+        "id": "w65",
+        "title": "Child Custody",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Shared/Sole custody claim.",
+        "steps": []
+    },
+    {
+        "id": "w66",
+        "title": "RCR (Sec 9)",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Legal call to return home.",
+        "steps": []
+    },
+    {
+        "id": "w67",
+        "title": "Dowry FIR",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Action for illegal demands.",
+        "steps": []
+    },
+    {
+        "id": "w68",
+        "title": "Succession Cert",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Claiming parents' wealth.",
+        "steps": []
+    },
+    {
+        "id": "w69",
+        "title": "SMA Marriage",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Protection for inter-faith.",
+        "steps": []
+    },
+    {
+        "id": "w70",
+        "title": "Ancestral Share",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Enforcing property rights.",
+        "steps": []
+    },
+    {
+        "id": "w71",
+        "title": "Cyber Stalking",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Removing fake profiles.",
+        "steps": []
+    },
+    {
+        "id": "w72",
+        "title": "Adoption Rights",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Legal single-mother adoption.",
+        "steps": []
+    },
+    {
+        "id": "w73",
+        "title": "MTP Legal Access",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Right to abort > 20w.",
+        "steps": []
+    },
+    {
+        "id": "w74",
+        "title": "WFH Rights",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Flexibility post-birth.",
+        "steps": []
+    },
+    {
+        "id": "w75",
+        "title": "Name Change",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Removing spouse surname.",
+        "steps": []
+    },
+    {
+        "id": "w76",
+        "title": "Bank Seizure",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Seizing pay for maintenance.",
+        "steps": []
+    },
+    {
+        "id": "w77",
+        "title": "Protective Custody",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Action for minor runaway.",
+        "steps": []
+    },
+    {
+        "id": "w78",
+        "title": "Sextortion",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Trapping blackmailers.",
+        "steps": []
+    },
+    {
+        "id": "w79",
+        "title": "Bigamy Prosecution",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Action for illegal 2nd mar.",
+        "steps": []
+    },
+    {
+        "id": "w80",
+        "title": "Cruelty 498A",
+        "persona": "woman",
+        "category": "High Utility",
+        "desc": "Escaping dowry harassment.",
+        "steps": []
+    },
+    {
+        "id": "b81",
+        "title": "MSME Recovery",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Recovery with 3x Interest.",
+        "steps": []
+    },
+    {
+        "id": "b82",
+        "title": "GST Mismatch",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Reconciling 2A/3B gaps.",
+        "steps": []
+    },
+    {
+        "id": "b83",
+        "title": "TM Infringement",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Cease & Desist orders.",
+        "steps": []
+    },
+    {
+        "id": "b84",
+        "title": "Director Liability",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Defending personal fines.",
+        "steps": []
+    },
+    {
+        "id": "b85",
+        "title": "GST Lock",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Resolving RC suspension.",
+        "steps": []
+    },
+    {
+        "id": "b86",
+        "title": "Contract Breach",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Damages for missed delivery.",
+        "steps": []
+    },
+    {
+        "id": "b87",
+        "title": "Angel Tax",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Exemption from I-T audit.",
+        "steps": []
+    },
+    {
+        "id": "b88",
+        "title": "Import Duty",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Recovery of excess duty.",
+        "steps": []
+    },
+    {
+        "id": "b89",
+        "title": "FSSAI License",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Applying for food licence.",
+        "steps": []
+    },
+    {
+        "id": "b90",
+        "title": "Labour Audit",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Compliance registers.",
+        "steps": []
+    },
+    {
+        "id": "b91",
+        "title": "DSC Misuse",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Action for stolen DSC.",
+        "steps": []
+    },
+    {
+        "id": "b92",
+        "title": "Copyright Case",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Protecting software code.",
+        "steps": []
+    },
+    {
+        "id": "b93",
+        "title": "Founder Deadlock",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Resolving co-founder rift.",
+        "steps": []
+    },
+    {
+        "id": "b94",
+        "title": "Fire NOC",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Action for arbitrary denial.",
+        "steps": []
+    },
+    {
+        "id": "b95",
+        "title": "GST Refund",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Recovery of accumulated ITC.",
+        "steps": []
+    },
+    {
+        "id": "b96",
+        "title": "Cheque Bounce",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Criminal debt recovery.",
+        "steps": []
+    },
+    {
+        "id": "b97",
+        "title": "Insolvency",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Filing against debtor.",
+        "steps": []
+    },
+    {
+        "id": "b98",
+        "title": "PF Show Cause",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Replying to officer visit.",
+        "steps": []
+    },
+    {
+        "id": "b99",
+        "title": "Data Privacy",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Updating website legal.",
+        "steps": []
+    },
+    {
+        "id": "b100",
+        "title": "Franchise Breach",
+        "persona": "business",
+        "category": "High Utility",
+        "desc": "Exit for bad support.",
+        "steps": []
+    },
+    {
+        "id": "s101",
+        "title": "UGC Fee Refund",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Full refund on seat exit.",
+        "steps": []
+    },
+    {
+        "id": "s102",
+        "title": "Ragging FIR",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Action for mental torture.",
+        "steps": []
+    },
+    {
+        "id": "s103",
+        "title": "Cyberbullying",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Removing morphed photos.",
+        "steps": []
+    },
+    {
+        "id": "s104",
+        "title": "Loan Delay",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Forcing disbursement.",
+        "steps": []
+    },
+    {
+        "id": "s105",
+        "title": "Degree RTI",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Fixing college delays.",
+        "steps": []
+    },
+    {
+        "id": "s106",
+        "title": "Paper Leak FIR",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "FIR for merit loss.",
+        "steps": []
+    },
+    {
+        "id": "s107",
+        "title": "Fellowship Arrears",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Recovery of JRF stipend.",
+        "steps": []
+    },
+    {
+        "id": "s108",
+        "title": "Hostel Rule Change",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Challenging binary rules.",
+        "steps": []
+    },
+    {
+        "id": "s109",
+        "title": "Fake University",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Recovery of scam fee.",
+        "steps": []
+    },
+    {
+        "id": "s110",
+        "title": "Placement Fraud",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Action for failed promise.",
+        "steps": []
+    },
+    {
+        "id": "s111",
+        "title": "Certificate Release",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Recovery of marksheets.",
+        "steps": []
+    },
+    {
+        "id": "s112",
+        "title": "Mental Health",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Right to Uni Counseling.",
+        "steps": []
+    },
+    {
+        "id": "s113",
+        "title": "Library Fine",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Challenging 10x fines.",
+        "steps": []
+    },
+    {
+        "id": "s114",
+        "title": "Visa Denial",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Legal appeal for visa.",
+        "steps": []
+    },
+    {
+        "id": "s115",
+        "title": "Internship IP",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Protecting student dev.",
+        "steps": []
+    },
+    {
+        "id": "s116",
+        "title": "Scholarship Merit",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Correcting rejected app.",
+        "steps": []
+    },
+    {
+        "id": "s117",
+        "title": "Exam Re-evaluation",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Obtaining copy of paper.",
+        "steps": []
+    },
+    {
+        "id": "s118",
+        "title": "Foreign Degree",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Action for AIU cert.",
+        "steps": []
+    },
+    {
+        "id": "s119",
+        "title": "Teacher Bias",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Grievance for marking.",
+        "steps": []
+    },
+    {
+        "id": "s120",
+        "title": "Sports Quota",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Claiming correct ranking.",
+        "steps": []
+    },
+    {
+        "id": "s121",
+        "title": "Mark Sheet Correction",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Fixing spelling on Degree.",
+        "steps": []
+    },
+    {
+        "id": "s122",
+        "title": "Entrance Exam Error",
+        "persona": "student",
+        "category": "High Utility",
+        "desc": "Challenging answer key.",
+        "steps": []
+    },
+    {
+        "id": "s123",
+        "title": "Maintenance Claim",
+        "persona": "senior",
+        "category": "High Utility",
+        "desc": "Claiming upkeep from sons.",
+        "steps": []
+    },
+    {
+        "id": "s124",
+        "title": "Pension Error",
+        "persona": "senior",
+        "category": "High Utility",
+        "desc": "Correcting bank delays.",
+        "steps": []
+    },
+    {
+        "id": "s125",
+        "title": "Will Drafting",
+        "persona": "senior",
+        "category": "High Utility",
+        "desc": "Safe estate planning.",
+        "steps": []
+    },
+    {
+        "id": "s126",
+        "title": "Reverse Mortgage",
+        "persona": "senior",
+        "category": "High Utility",
+        "desc": "Income from property.",
+        "steps": []
+    },
+    {
+        "id": "s127",
+        "title": "Elder Abuse FIR",
+        "persona": "senior",
+        "category": "High Utility",
+        "desc": "Removing abusive relative.",
+        "steps": []
+    },
+    {
+        "id": "s128",
+        "title": "FD Interest Theft",
+        "persona": "senior",
+        "category": "High Utility",
+        "desc": "Action for reduced rates.",
+        "steps": []
+    },
+    {
+        "id": "s129",
+        "title": "Life Certificate",
+        "persona": "senior",
+        "category": "High Utility",
+        "desc": "Renewing pension status.",
+        "steps": []
+    },
+    {
+        "id": "s130",
+        "title": "Geriatric Care",
+        "persona": "senior",
+        "category": "High Utility",
+        "desc": "Negligence in nursing home.",
+        "steps": []
+    },
+    {
+        "id": "s131",
+        "title": "Railway Concession",
+        "persona": "senior",
+        "category": "High Utility",
+        "desc": "Action for lost benefit.",
+        "steps": []
+    },
+    {
+        "id": "s132",
+        "title": "Home Voting 80+",
+        "persona": "senior",
+        "category": "High Utility",
+        "desc": "Availing booth at home.",
+        "steps": []
+    },
+    {
+        "id": "c133",
+        "title": "Cyber FIR Scam",
+        "persona": "citizen",
+        "category": "High Utility",
+        "desc": "Recovery for scam loss.",
+        "steps": []
+    },
+    {
+        "id": "c134",
+        "title": "156(3) FIR Order",
+        "persona": "citizen",
+        "category": "High Utility",
+        "desc": "Magistrate forced FIR.",
+        "steps": []
+    },
+    {
+        "id": "c135",
+        "title": "Passport Delay",
+        "persona": "citizen",
+        "category": "High Utility",
+        "desc": "Expediting verification.",
+        "steps": []
+    },
+    {
+        "id": "c136",
+        "title": "Driving Licence",
+        "persona": "citizen",
+        "category": "High Utility",
+        "desc": "Resolving licence lag.",
+        "steps": []
+    },
+    {
+        "id": "c137",
+        "title": "Noise Pollution",
+        "persona": "citizen",
+        "category": "High Utility",
+        "desc": "Stop midnight speakers.",
+        "steps": []
+    },
+    {
+        "id": "c138",
+        "title": "RTI First Appeal",
+        "persona": "citizen",
+        "category": "High Utility",
+        "desc": "Escalation for no-reply.",
+        "steps": []
+    },
+    {
+        "id": "c139",
+        "title": "Challan Contest",
+        "persona": "citizen",
+        "category": "High Utility",
+        "desc": "Challan camera errors.",
+        "steps": []
+    },
+    {
+        "id": "c140",
+        "title": "Aadhar Biometric",
+        "persona": "citizen",
+        "category": "High Utility",
+        "desc": "Fixing finger auth.",
+        "steps": []
+    },
+    {
+        "id": "c141",
+        "title": "Garbage Disposal",
+        "persona": "citizen",
+        "category": "High Utility",
+        "desc": "Action for local dump.",
+        "steps": []
+    },
+    {
+        "id": "c142",
+        "title": "Animal Rights FIR",
+        "persona": "citizen",
+        "category": "High Utility",
+        "desc": "Action for street abuse.",
+        "steps": []
+    }
+]

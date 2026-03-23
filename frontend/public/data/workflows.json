@@ -1,0 +1,1371 @@
+[
+    {
+        "id": "s101",
+        "title": "UGC Fee Refund",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Full refund on seat exit per 2023 rules.",
+        "steps": [
+            {
+                "title": "Filing a Formal Refund Request & Statutory Notice",
+                "logic": "The first step is to submit a written application to the Registrar or the Head of the Institution. You must explicitly mention the UGC Notification on Refund of Fees (2023). Under these rules, colleges cannot withhold your original certificates and must refund your fees in full if you withdraw your admission before the deadline specified by the UGC. This establishes your legal standing for any future escalation.",
+                "objective": "Actuating your legal right to a refund",
+                "checklist": [
+                    "Send notice via Registered Post or Email",
+                    "Keep a copy of the acknowledgment receipt",
+                    "Cite Section 4.1 of the 2023 UGC Notification"
+                ],
+                "docs": [
+                    "UGC Fee Refund Notification (Current Academic Year)"
+                ]
+            },
+            {
+                "title": "Escalation to the University Student Grievance Redressal Committee (SGRC)",
+                "logic": "If the institution fails to respond or denies your refund within 15 days, you should approach the SGRC. This is a mandatory internal committee defined under the UGC Regulations 2023. They are obligated to hear your case and provide a resolution within a specific timeframe. This step is crucial because the University Ombudsman will usually require proof that you first tried to resolve it through the SGRC.",
+                "objective": "Using internal statutory grievance mechanisms",
+                "checklist": [
+                    "Draft a detailed complaint with the SGRC",
+                    "Attach proof of your initial refund request",
+                    "Request a formal hearing or written response"
+                ],
+                "docs": [
+                    "SGRC Complaint Acknowledgment"
+                ]
+            },
+            {
+                "title": "Filing a Complaint with the University Ombudsman or Consumer Court",
+                "logic": "If the SGRC's decision is unsatisfactory, you can appeal to the University Ombudsman. Simultaneously, because education is increasingly viewed as a 'service' under the Consumer Protection Act 2019 (depending on the specific circumstances of the institution), you can file a complaint with the District Consumer Commission for 'Deficiency in Service'. For government universities, you also have the option of filing a Writ of Mandamus in the High Court under Article 226 to compel them to follow UGC guidelines.",
+                "objective": "Enforcing statutory compliance through judicial authorities",
+                "checklist": [
+                    "Prepare the Ombudsman Appeal Form",
+                    "Draft a Legal Notice via a lawyer for Consumer Court",
+                    "Attach all previous correspondence as evidence"
+                ],
+                "docs": [
+                    "Consumer Court Petition / Writ Draft"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "s102",
+        "title": "Ragging FIR",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Criminal action for institutional abuse.",
+        "steps": [
+            {
+                "title": "Immediate Incident Reporting & Anti-Ragging Committee (ARC) Activation",
+                "logic": "You must immediately report any incident of ragging to the Anti-Ragging Committee of your college. According to the UGC Regulations 2009, every institution MUST have an ARC and an Anti-Ragging Squad. The committee is legally bound to investigate the matter within 24 hours. Ensuring this is documented is vital for holding the institution itself liable for negligence if they fail to protect you.",
+                "objective": "Initiating institutional accountability",
+                "checklist": [
+                    "Identify the perpetrators and witnesses",
+                    "Note the exact date, time, and nature of the abuse",
+                    "Submit a formal written complaint to the ARC head"
+                ],
+                "docs": [
+                    "UGC Anti-Ragging Regulations 2009"
+                ]
+            },
+            {
+                "title": "Mandatory Lodging of a First Information Report (FIR) under Section 154 CrPC",
+                "logic": "Ragging is not just an institutional issue; it is a crime under the Indian Penal Code (IPC). You should visit the nearest Police Station to lodge an FIR. If the college authorities refuse to help you, they are in violation of the Supreme Court's mandate in the 'Vishwa Jagriti Mission' case. The FIR puts the state machinery into action and ensures that the perpetrators face criminal prosecution for acts like physical hurt (Sec 323) or criminal intimidation (Sec 506).",
+                "objective": "Triggering the criminal justice system",
+                "checklist": [
+                    "Provide a detailed statement to the SHO",
+                    "Ensure the FIR is registered under relevant IPC sections",
+                    "Obtain a free signed copy of the FIR immediately"
+                ],
+                "docs": [
+                    "Certified FIR Copy"
+                ]
+            },
+            {
+                "title": "Reporting to the National Anti-Ragging Helpline & Judicial Follow-up",
+                "logic": "Beyond the local police, you must report the incident to the National Anti-Ragging Helpline (1800-180-5522). This ensures that the UGC is aware of the situation and can take punitive action against the college if necessary. If the police fail to investigate properly, you can file a 'Protest Petition' in court or approach the High Court under Article 226 for a court-monitored investigation.",
+                "objective": "Ensuring comprehensive legal and administrative protection",
+                "checklist": [
+                    "Call the 24/7 National Anti-Ragging Helpline",
+                    "Follow up with the UGC's monitoring agency",
+                    "Consult a lawyer for potential civil damages"
+                ],
+                "docs": [
+                    "UGC Compliance Report / Court Petition"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "s103",
+        "title": "Cyberbullying",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Removing morphed photos and blocking trolls.",
+        "steps": []
+    },
+    {
+        "id": "s104",
+        "title": "Loan Delay",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Forcing disbursement of sanctioned education loans.",
+        "steps": []
+    },
+    {
+        "id": "s105",
+        "title": "Degree RTI",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Obtaining withheld certificates via RTI.",
+        "steps": []
+    },
+    {
+        "id": "s106",
+        "title": "Paper Leak FIR",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "reporting exam malpractice to authorities.",
+        "steps": []
+    },
+    {
+        "id": "s107",
+        "title": "Fellowship Arrears",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Claiming unpaid research stipends/JRF.",
+        "steps": []
+    },
+    {
+        "id": "s108",
+        "title": "Hostel Rule Change",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Challenging arbitrary fee hikes or curfews.",
+        "steps": []
+    },
+    {
+        "id": "s109",
+        "title": "Fake University",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Legal recourse against unrecognised institutions.",
+        "steps": []
+    },
+    {
+        "id": "s110",
+        "title": "Placement Fraud",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Action for fake job promises by colleges.",
+        "steps": []
+    },
+    {
+        "id": "s111",
+        "title": "Certificate Release",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Forcing release of original docs held by college.",
+        "steps": []
+    },
+    {
+        "id": "s112",
+        "title": "Mental Health",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Privacy and support rights in campus clinics.",
+        "steps": []
+    },
+    {
+        "id": "s113",
+        "title": "Library Fine",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Challenging excessive or arbitrary fines.",
+        "steps": []
+    },
+    {
+        "id": "s114",
+        "title": "Visa Denial",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Procedural help for study abroad visa rejection.",
+        "steps": []
+    },
+    {
+        "id": "s115",
+        "title": "Internship IP",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Protecting ownership of research/code output.",
+        "steps": []
+    },
+    {
+        "id": "s116",
+        "title": "Scholarship Merit",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Claiming withheld merit-based state aid.",
+        "steps": []
+    },
+    {
+        "id": "s117",
+        "title": "Exam Re-evaluation",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Statutory right to see answer scripts.",
+        "steps": []
+    },
+    {
+        "id": "s118",
+        "title": "Foreign Degree",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Equivalence mapping with AIU for jobs.",
+        "steps": []
+    },
+    {
+        "id": "s119",
+        "title": "Teacher Bias",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Internal redressal for grading discrimination.",
+        "steps": []
+    },
+    {
+        "id": "s120",
+        "title": "Sports Quota",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Claiming reserved seats under state policy.",
+        "steps": [
+            {
+                "title": "STATUTORY QUOTA ELIGIBILITY",
+                "logic": "You must first verify your eligibility under the specific State Sports Policy. Under the current rules, seats are reserved for athletes who have represented the state or nation in recognized tournaments. If the college denies your certificate, you can challenge it via a 'Representation' to the Director of Sports or the University Sports Council.",
+                "objective": "Verifying legal standing for reservation",
+                "checklist": [
+                    "Verify certificate authenticity",
+                    "Check State Sports Policy PDF",
+                    "Obtain 'Rank Certificate' from Sports Dept"
+                ],
+                "docs": [
+                    "Sports Merit Certificate",
+                    "State Eligibility Letter"
+                ]
+            },
+            {
+                "title": "ESCALATION TO SPORTS DIRECTORATE",
+                "logic": "If the admission cell ignores your quota rank, you must file a formal grievance with the Directorate of Sports and Youth Services. They are the statutory authority for validating sports credentials. You can also file an RTI to see the 'Sports Merit List' to ensure transparency and prevent illegal seat allotments to non-deserving candidates.",
+                "objective": "Enforcing merit-based admission",
+                "checklist": [
+                    "File grievance with Sports Director",
+                    "Lodge RTI for Merit List",
+                    "Request Stay on admission if rank skipped"
+                ],
+                "docs": [
+                    "Grievance Letter",
+                    "RTI Application"
+                ]
+            },
+            {
+                "title": "WRIT PETITION (MANDAMUS)",
+                "logic": "If all administrative remedies fail, you can approach the High Court under Article 226 for a Writ of Mandamus. The court can direct the university to follow its own published quota rules and secure your admission if your rank was unfairly bypassed. This is a common statutory remedy in educational reservation disputes.",
+                "objective": "Judicial enforcement of reservation rights",
+                "checklist": [
+                    "Consult High Court Lawyer",
+                    "Collect evidence of rank jump",
+                    "File Writ for seat allocation"
+                ],
+                "docs": [
+                    "Writ Petition (Draft)",
+                    "Court Affidavit"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "s121",
+        "title": "Mark Sheet Correction",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Correction of academic marks, re-evaluation, and result tabulation errors.",
+        "steps": [
+            {
+                "title": "CLERICAL & TABULATION AUDIT",
+                "logic": "If you suspect a marking error, your first step is to request a 'Tabulation Check'. This is a statutory right to ensure that the marks on your answer sheet match those on your mark sheet. You can file a formal application for 'Scrutiny' with the University Registrar or COE (Controller of Examinations). Universities are legally bound to correct any clerical transposition errors immediately without charging a full re-evaluation fee.",
+                "objective": "Verifying clerical accuracy of results",
+                "checklist": [
+                    "Collect copy of results/marksheet",
+                    "Identify specific subject discrepancy",
+                    "Lodge 'Scrutiny' application with COE"
+                ],
+                "docs": [
+                    "Scrutiny Request Form",
+                    "Current Copy of Marksheet"
+                ]
+            },
+            {
+                "title": "FORMAL RE-EVALUATION REQUEST",
+                "logic": "If the clerical check is correct but you believe the marking was unfair, you must apply for 'Re-evaluation'. This is governed by the specific University Ordinance. Most universities allow this within 15-21 days of result declaration. If the marks change significantly (usually >5%), the higher marks must be updated on the original degree record. Citations: UGC Guidelines on Evaluation Reforms.",
+                "objective": "Securing qualitative re-assessment",
+                "checklist": [
+                    "Check Re-evaluation deadline",
+                    "Pay prescribed re-valuation fee",
+                    "Track application via University Portal"
+                ],
+                "docs": [
+                    "Re-evaluation Application",
+                    "Fee Receipt"
+                ]
+            },
+            {
+                "title": "RTI FOR ANSWER SCRIPTS",
+                "logic": "If the university refuses re-evaluation or transparency, you have the fundamental right to see/inspect your evaluated answer scripts under the RTI Act 2005. As per the Supreme Court in CBSE vs Aditya Bandopadhyay (2011), answer scripts are 'Information'. You can file an RTI with the PIO of the University to receive a certified copy of your script, which can then be used to challenge arbitrary marking in the High Court via a Writ Petition.",
+                "objective": "Enforcing transparency and judicial review",
+                "checklist": [
+                    "File RTI with University PIO",
+                    "Request 'Inspection' or 'Certified Copy'",
+                    "Verify marking based on official 'Model Answer'"
+                ],
+                "docs": [
+                    "RTI Application for Answer Script"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "s122",
+        "title": "Entrance Exam Error",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Challenging answer key mistakes legally.",
+        "steps": []
+    },
+    {
+        "id": "s123",
+        "title": "SC/ST Cell",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Reporting caste-based discrimination on campus.",
+        "steps": []
+    },
+    {
+        "id": "s124",
+        "title": "Minority Aid",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Accessing special central/state grants.",
+        "steps": []
+    },
+    {
+        "id": "s125",
+        "title": "Internal Assessment",
+        "persona": "student",
+        "category": "Academic & Campus",
+        "desc": "Challenging arbitrary zero-marks policy.",
+        "steps": []
+    },
+    {
+        "id": "c101",
+        "title": "E-commerce Refund",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Defective goods or non-delivery recovery.",
+        "steps": [
+            {
+                "title": "FORMAL PLATFORM ESCALATION",
+                "logic": "Under the Consumer Protection (E-Commerce) Rules 2020, every platform must have a Grievance Redressal Officer. Your first statutory step is to file a complaint via the app and collect a 'Ticket ID'. If the Customer Support bot gives generic replies, find the specific email of the Nodal Officer on their 'Contact Us' page and send a formal 'Notice of Dispute'.",
+                "objective": "Triggering internal platform redressal",
+                "checklist": [
+                    "Collect Order ID and Ticket ID",
+                    "Record Unboxing Video if applicable",
+                    "Email the Nodal Grievance Officer"
+                ],
+                "docs": [
+                    "Email Record",
+                    "Screenshot of Ticket"
+                ]
+            },
+            {
+                "title": "NATIONAL CONSUMER HELPLINE",
+                "logic": "If the platform denies the refund, lodge a complaint with the National Consumer Helpline (NCH) by calling 1915 or via the 'e-Daakhil' portal. NCH acts as an intermediary and has a high success rate in refund cases. If the company is listed as a 'Partner Company', the NCH grievance carries significant statutory weight in future court proceedings.",
+                "objective": "Pre-litigation government mediation",
+                "checklist": [
+                    "Register on NCH (1915)",
+                    "Link your Order Ticket ID",
+                    "Wait for 7-day response period"
+                ],
+                "docs": [
+                    "NCH Grievance Receipt"
+                ]
+            },
+            {
+                "title": "CONSUMER COMMISSION FILING",
+                "logic": "If mediation fails, you must file a formal Consumer Complaint in the District Commission under Section 35 of the CPA 2019. For claims under \u20b950 Lakhs, the District Commission has jurisdiction. You can represent yourself without a lawyer. Specify the 'Deficiency in Service' and 'Unfair Trade Practice' clearly to claim your refund plus compensation for mental agony.",
+                "objective": "Judicial recovery of funds",
+                "checklist": [
+                    "Draft Section 35 Complaint",
+                    "Attach all NCH and Support emails",
+                    "File via e-Daakhil for speed"
+                ],
+                "docs": [
+                    "Legal Notice",
+                    "Consumer Complaint Draft"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "c102",
+        "title": "Warranty Denial",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Action for refused repairs on electronics.",
+        "steps": []
+    },
+    {
+        "id": "c103",
+        "title": "Airline Delay",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Compensation for flight cancellations/delays.",
+        "steps": []
+    },
+    {
+        "id": "c104",
+        "title": "Real Estate RERA",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Delay in possession or poor construction.",
+        "steps": []
+    },
+    {
+        "id": "c105",
+        "title": "Insurance Rejection",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Challenging rejected health/motor claims.",
+        "steps": []
+    },
+    {
+        "id": "c106",
+        "title": "Bank Fraud",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Limiting liability for unauthorized txns.",
+        "steps": []
+    },
+    {
+        "id": "c107",
+        "title": "Food Adulteration",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Reporting unsafe food to FSSAI/Court.",
+        "steps": []
+    },
+    {
+        "id": "c108",
+        "title": "Medical Negligence",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Action for wrong diagnosis or surgery.",
+        "steps": []
+    },
+    {
+        "id": "c109",
+        "title": "Electricity Bill",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Challenging excessive or faulty meter bills.",
+        "steps": []
+    },
+    {
+        "id": "c110",
+        "title": "Telecom MNP",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Action for blocked sim porting or billing.",
+        "steps": []
+    },
+    {
+        "id": "c111",
+        "title": "Ed-Tech Refund",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Course fee recovery for misleading claims.",
+        "steps": []
+    },
+    {
+        "id": "c112",
+        "title": "Gold/Jewellery",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Action for hallmarking fraud or weight loss.",
+        "steps": []
+    },
+    {
+        "id": "c113",
+        "title": "Home Service",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Issues with UrbanCompany/contractor work.",
+        "steps": []
+    },
+    {
+        "id": "c114",
+        "title": "Courier Loss",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Claiming value for lost/damaged parcels.",
+        "steps": []
+    },
+    {
+        "id": "c115",
+        "title": "Gym Membership",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Refund for service closure or injury.",
+        "steps": []
+    },
+    {
+        "id": "c116",
+        "title": "Vehicle Defect",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Lemon law help for new car manufacturing defects.",
+        "steps": []
+    },
+    {
+        "id": "c117",
+        "title": "Privacy Breach",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Action for data leak by apps/platforms.",
+        "steps": []
+    },
+    {
+        "id": "c118",
+        "title": "Fake Review",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Reporting manipulated e-commerce feedback.",
+        "steps": []
+    },
+    {
+        "id": "c119",
+        "title": "Service Charge",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Refusing illegal 'Service Charge' at hotels.",
+        "steps": []
+    },
+    {
+        "id": "c120",
+        "title": "Product Safety",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Recalling hazardous toys or appliances.",
+        "steps": []
+    },
+    {
+        "id": "c121",
+        "title": "Price Gouging",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Reporting MRP violations or hoarding.",
+        "steps": []
+    },
+    {
+        "id": "c122",
+        "title": "Credit Score",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Correcting CIBIL errors and reporting banks.",
+        "steps": []
+    },
+    {
+        "id": "c123",
+        "title": "Digital Subscription",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Action for hidden auto-renewal charges.",
+        "steps": []
+    },
+    {
+        "id": "c124",
+        "title": "OTT Content",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Grievance for censorship or misleading ads.",
+        "steps": []
+    },
+    {
+        "id": "c125",
+        "title": "Animal Rights FIR",
+        "persona": "consumer",
+        "category": "Consumer Protection",
+        "desc": "Action for street abuse or cruelty.",
+        "steps": [
+            {
+                "title": "IMMEDIATE ON-SITE ACTION",
+                "logic": "If you witness animal cruelty, your first statutory action is to record evidence (video/photos) and stop the act if safe. Call the local police (100 or 112) and the nearest NGO. Under Section 11 of the PCA Act 1960, animal abuse is a punishable offense. You must demand the police to rescue the animal immediately under 'Emergency Veterinary Necessity' and preserve the scene.",
+                "objective": "Securing the animal and evidence",
+                "checklist": [
+                    "Record video/photo evidence",
+                    "Call local police for intervention",
+                    "Alert nearby Animal Welfare NGO"
+                ],
+                "docs": [
+                    "Evidence Photo/Video Log"
+                ]
+            },
+            {
+                "title": "STATUTORY FIR REGISTRATION",
+                "logic": "The police are legally bound to register an FIR for animal cruelty under IPC Sections 428/429 (Mischief) and the PCA Act. If the officer refuses, you must cite the DGP's advisory or escalate to the Senior Superintendent of Police (SSP). Do not settle for a 'DDR' (Daily Diary Report); insist on an FIR to ensure a criminal investigation. You can also file a private complaint in the Magistrate court if police inaction persists.",
+                "objective": "Activating criminal law machinery",
+                "checklist": [
+                    "Cite IPC 428/429 to the officer",
+                    "Demand FIR copy (Free of cost)",
+                    "Escalate to SSP if FIR refused"
+                ],
+                "docs": [
+                    "FIR Copy",
+                    "Written Complaint"
+                ]
+            },
+            {
+                "title": "VETERINARY FORENSIC AUDIT",
+                "logic": "The animal must be examined by a Government Veterinarian to establish 'Clinical Evidence' of cruelty. This Medico-Legal Certificate (MLC) is the backbone of your case. Ensure the doctor specifies the nature of injuries and the 'Instrument of Injury'. Without a formal medical report, the case will collapse in court during the trial phase.",
+                "objective": "Establishing clinical proof of abuse",
+                "checklist": [
+                    "Transfer animal to Govt Vet Clinic",
+                    "Request MLC medical report",
+                    "Ensure 'Forensic Nature' is mentioned"
+                ],
+                "docs": [
+                    "Veterinary MLC Report",
+                    "Post-Mortem (if applicable)"
+                ]
+            }
+        ]
+    },
+    {
+        "id": "e101",
+        "title": "Unpaid Salary",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Recovery of wages under Payment of Wages Act.",
+        "steps": []
+    },
+    {
+        "id": "e102",
+        "title": "Wrongful Term",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Challenging layoff without notice/cause.",
+        "steps": []
+    },
+    {
+        "id": "e103",
+        "title": "POSH Complaint",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Reporting workplace sexual harassment.",
+        "steps": []
+    },
+    {
+        "id": "e104",
+        "title": "PF Withdrawal",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Escalation for withheld EPF contributions.",
+        "steps": []
+    },
+    {
+        "id": "e105",
+        "title": "Gratuity Claim",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Statutory payment after 5 years of service.",
+        "steps": []
+    },
+    {
+        "id": "e106",
+        "title": "Non-Compete",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Challenging illegal 'Notice Period' extensions.",
+        "steps": []
+    },
+    {
+        "id": "e107",
+        "title": "Maternity Denied",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Action for firing pregnant employees.",
+        "steps": []
+    },
+    {
+        "id": "e108",
+        "title": "Overtime Pay",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Claiming legal wages for extra labor.",
+        "steps": []
+    },
+    {
+        "id": "e109",
+        "title": "Workplace Injury",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Compensation under Employees Comp Act.",
+        "steps": []
+    },
+    {
+        "id": "e110",
+        "title": "Promotion Bias",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Internal grievance for caste/gender bias.",
+        "steps": []
+    },
+    {
+        "id": "e111",
+        "title": "Toxic Environment",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Constructive dismissal and mental health.",
+        "steps": []
+    },
+    {
+        "id": "e112",
+        "title": "Bond Recovery",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Challenging illegal 'Employment Bonds'.",
+        "steps": []
+    },
+    {
+        "id": "e113",
+        "title": "Variable Pay",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Forcing payment of earned bonuses/incentives.",
+        "steps": []
+    },
+    {
+        "id": "e114",
+        "title": "Night Shift",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Safety and transport rights for women.",
+        "steps": []
+    },
+    {
+        "id": "e115",
+        "title": "Notice Pay",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Recovery when employer waives notice period.",
+        "steps": []
+    },
+    {
+        "id": "e116",
+        "title": "Full & Final",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Delayed F&F settlement and experience letters.",
+        "steps": []
+    },
+    {
+        "id": "e117",
+        "title": "ESIC Benefits",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Accessing medical care for low-wage staff.",
+        "steps": []
+    },
+    {
+        "id": "e118",
+        "title": "Government Job",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Challenging recruitment process errors.",
+        "steps": []
+    },
+    {
+        "id": "e119",
+        "title": "Contractual Pay",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Rights of gig/contract workers.",
+        "steps": []
+    },
+    {
+        "id": "e120",
+        "title": "Trade Union",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Right to organize and collective bargaining.",
+        "steps": []
+    },
+    {
+        "id": "e121",
+        "title": "Tax Deduction",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Challenging wrong TDS without Form 16.",
+        "steps": []
+    },
+    {
+        "id": "e122",
+        "title": "Work from Home",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Tax and utility reimbursement rights.",
+        "steps": []
+    },
+    {
+        "id": "e123",
+        "title": "Moonlighting",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Defense against arbitrary termination.",
+        "steps": []
+    },
+    {
+        "id": "e124",
+        "title": "Internal Transfer",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Challenging punitive or remote transfers.",
+        "steps": []
+    },
+    {
+        "id": "e125",
+        "title": "Whistleblower",
+        "persona": "employee",
+        "category": "Workplace & Career",
+        "desc": "Protection for reporting company fraud.",
+        "steps": []
+    },
+    {
+        "id": "t101",
+        "title": "Deposit Refund",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Recovery of advance after exit.",
+        "steps": []
+    },
+    {
+        "id": "t102",
+        "title": "Eviction Threat",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Defense against illegal 24-hour notice.",
+        "steps": []
+    },
+    {
+        "id": "t103",
+        "title": "Maintenance Fix",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Forcing repairs for water/power/structural.",
+        "steps": []
+    },
+    {
+        "id": "t104",
+        "title": "Privacy/Entry",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Stopping landlord from entering without notice.",
+        "steps": []
+    },
+    {
+        "id": "t105",
+        "title": "Lockout Defense",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Action when landlord changes locks illegally.",
+        "steps": []
+    },
+    {
+        "id": "t106",
+        "title": "Rent Agreement",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Correcting unfair terms before signing.",
+        "steps": []
+    },
+    {
+        "id": "t107",
+        "title": "PG/Hostel",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Rights for shared housing and safety.",
+        "steps": []
+    },
+    {
+        "id": "t108",
+        "title": "Electricity Cut",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Stopping illegal utility disconnection.",
+        "steps": []
+    },
+    {
+        "id": "t109",
+        "title": "Commercial Lease",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Force Majeure and rent waiver rights.",
+        "steps": []
+    },
+    {
+        "id": "t110",
+        "title": "Painting/Wear",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Avoiding illegal painting charges at exit.",
+        "steps": []
+    },
+    {
+        "id": "t111",
+        "title": "Sub-letting",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Permission and risk mitigation.",
+        "steps": []
+    },
+    {
+        "id": "t112",
+        "title": "Guest Policy",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Challenging arbitrary visitor bans.",
+        "steps": []
+    },
+    {
+        "id": "t113",
+        "title": "Brokerage Dispute",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Refusal to pay extra fee for renewals.",
+        "steps": []
+    },
+    {
+        "id": "t114",
+        "title": "Noise/Nuisance",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Handling difficult neighbors legally.",
+        "steps": []
+    },
+    {
+        "id": "t115",
+        "title": "Pet Permission",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Rights to keep pets in high-rise society.",
+        "steps": []
+    },
+    {
+        "id": "t116",
+        "title": "Notice Period",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Adjusting notice against pending rent.",
+        "steps": []
+    },
+    {
+        "id": "t117",
+        "title": "Society Bylaws",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Challenging illegal bachelor/spinster bans.",
+        "steps": []
+    },
+    {
+        "id": "t118",
+        "title": "Parking Dispute",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Allocating safe parking in rented space.",
+        "steps": []
+    },
+    {
+        "id": "t119",
+        "title": "Structural Safety",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Reporting dangerous old buildings.",
+        "steps": []
+    },
+    {
+        "id": "t120",
+        "title": "Rent Receipt",
+        "persona": "tenant",
+        "category": "Housing & Tenancy",
+        "desc": "Compelling landlord to issue tax-proof docs.",
+        "steps": []
+    },
+    {
+        "id": "w101",
+        "title": "Domestic Abuse",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Protection Order under DV Act 498A.",
+        "steps": []
+    },
+    {
+        "id": "w102",
+        "title": "Maintenance 125",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Claiming survival funds for self/children.",
+        "steps": []
+    },
+    {
+        "id": "w103",
+        "title": "Stalking/Harassment",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Cyber and physical safety measures.",
+        "steps": []
+    },
+    {
+        "id": "w104",
+        "title": "Maternity Jobs",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Protecting employment during pregnancy.",
+        "steps": []
+    },
+    {
+        "id": "w105",
+        "title": "Ancestral Property",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Claiming equal share as per Hindu Succ Act.",
+        "steps": []
+    },
+    {
+        "id": "w106",
+        "title": "Equal Pay",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Action for gender-based wage discrimination.",
+        "steps": []
+    },
+    {
+        "id": "w107",
+        "title": "Child Custody",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Guardianship rights and visitation.",
+        "steps": []
+    },
+    {
+        "id": "w108",
+        "title": "Divorce Procedural",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Mutual and Contested statutory paths.",
+        "steps": []
+    },
+    {
+        "id": "w109",
+        "title": "Safe Transit",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Employer responsibility for night transport.",
+        "steps": []
+    },
+    {
+        "id": "w110",
+        "title": "Workplace POSH",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Internal and police action for harassment.",
+        "steps": []
+    },
+    {
+        "id": "w111",
+        "title": "Public Safety",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Zero FIR for crimes in transit/trains.",
+        "steps": []
+    },
+    {
+        "id": "w112",
+        "title": "Reproductive Rights",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Consent and privacy in medical care.",
+        "steps": []
+    },
+    {
+        "id": "w113",
+        "title": "Dowry Demand",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Reporting harassment for marriage funds.",
+        "steps": []
+    },
+    {
+        "id": "w114",
+        "title": "Property Registry",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Stamp duty benefits and ownership.",
+        "steps": []
+    },
+    {
+        "id": "w115",
+        "title": "PCPNDT Rights",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Action for illegal gender tests/pressure.",
+        "steps": []
+    },
+    {
+        "id": "w116",
+        "title": "Single Mother",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Document rights for child's school/passport.",
+        "steps": []
+    },
+    {
+        "id": "w117",
+        "title": "Alimony Arrears",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Forcing payment of court-ordered maintenance.",
+        "steps": []
+    },
+    {
+        "id": "w118",
+        "title": "Workplace Creche",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Mandatory childcare support rights.",
+        "steps": []
+    },
+    {
+        "id": "w119",
+        "title": "Shelter Homes",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Emergency access to state protection.",
+        "steps": []
+    },
+    {
+        "id": "w120",
+        "title": "Online Privacy",
+        "persona": "woman",
+        "category": "Family & Safety",
+        "desc": "Removing non-consensual deepfakes/pics.",
+        "steps": []
+    },
+    {
+        "id": "b101",
+        "title": "Payment Recovery",
+        "persona": "business",
+        "category": "Business & Startup",
+        "desc": "MSME SAMADHAAN and Section 15 Notice.",
+        "steps": []
+    },
+    {
+        "id": "b102",
+        "title": "GST Notice",
+        "persona": "business",
+        "category": "Business & Startup",
+        "desc": "Replying to mismatch or scrutiny notices.",
+        "steps": []
+    },
+    {
+        "id": "b103",
+        "title": "Trademark Theft",
+        "persona": "business",
+        "category": "Business & Startup",
+        "desc": "Cease and Desist for brand infringement.",
+        "steps": []
+    },
+    {
+        "id": "b104",
+        "title": "Contract Breach",
+        "persona": "business",
+        "category": "Business & Startup",
+        "desc": "Arbitration and damages for vendor failure.",
+        "steps": []
+    },
+    {
+        "id": "b105",
+        "title": "Labor Compliance",
+        "persona": "business",
+        "category": "Business & Startup",
+        "desc": "Handling PF/ESI inspections legally.",
+        "steps": []
+    },
+    {
+        "id": "b106",
+        "title": "Director Liability",
+        "persona": "business",
+        "category": "Business & Startup",
+        "desc": "Protecting personal assets in biz suits.",
+        "steps": []
+    },
+    {
+        "id": "b107",
+        "title": "Startup IP",
+        "persona": "business",
+        "category": "Business & Startup",
+        "desc": "Founders agreement and equity vesting.",
+        "steps": []
+    },
+    {
+        "id": "b108",
+        "title": "Tax Scrutiny",
+        "persona": "business",
+        "category": "Business & Startup",
+        "desc": "Faceless assessment and appeal paths.",
+        "steps": []
+    },
+    {
+        "id": "b109",
+        "title": "Insolvency",
+        "persona": "business",
+        "category": "Business & Startup",
+        "desc": "Filing for NCLT or defending creditors.",
+        "steps": []
+    },
+    {
+        "id": "b110",
+        "title": "Data Compliance",
+        "persona": "business",
+        "category": "Business & Startup",
+        "desc": "DPDP Act readiness and user consent.",
+        "steps": []
+    },
+    {
+        "id": "b111",
+        "title": "Licensing Halt",
+        "persona": "business",
+        "category": "Business & Startup",
+        "desc": "Challenging license revocation/delays.",
+        "steps": []
+    },
+    {
+        "id": "b112",
+        "title": "Partnership Exit",
+        "persona": "business",
+        "category": "Business & Startup",
+        "desc": "Settling accounts and asset division.",
+        "steps": []
+    },
+    {
+        "id": "b113",
+        "title": "Import/Export",
+        "persona": "business",
+        "category": "Business & Startup",
+        "desc": "Handling customs seizures and delays.",
+        "steps": []
+    },
+    {
+        "id": "b114",
+        "title": "Fake Reviews",
+        "persona": "business",
+        "category": "Business & Startup",
+        "desc": "Action against organized brand damage.",
+        "steps": []
+    },
+    {
+        "id": "b115",
+        "title": "Cyber Attack",
+        "persona": "business",
+        "category": "Business & Startup",
+        "desc": "Statutory reporting and liability limit.",
+        "steps": []
+    },
+    {
+        "id": "n101",
+        "title": "Maintenance Act",
+        "persona": "senior",
+        "category": "Senior Citizen Rights",
+        "desc": "Claiming support from children via Tribunal.",
+        "steps": []
+    },
+    {
+        "id": "n102",
+        "title": "Pension Delay",
+        "persona": "senior",
+        "category": "Senior Citizen Rights",
+        "desc": "Forcing disbursement of govt/EPF pension.",
+        "steps": []
+    },
+    {
+        "id": "n103",
+        "title": "Property Eviction",
+        "persona": "senior",
+        "category": "Senior Citizen Rights",
+        "desc": "Expedited eviction of abusive relatives.",
+        "steps": []
+    },
+    {
+        "id": "n104",
+        "title": "Banking Safety",
+        "persona": "senior",
+        "category": "Senior Citizen Rights",
+        "desc": "Power of Attorney and fraud protection.",
+        "steps": []
+    },
+    {
+        "id": "n105",
+        "title": "Medical Ethics",
+        "persona": "senior",
+        "category": "Senior Citizen Rights",
+        "desc": "Consent and elderly care standards.",
+        "steps": []
+    },
+    {
+        "id": "n106",
+        "title": "Wills/Trusts",
+        "persona": "senior",
+        "category": "Senior Citizen Rights",
+        "desc": "Drafting and registering for smooth transfer.",
+        "steps": []
+    },
+    {
+        "id": "n107",
+        "title": "Age Discrim",
+        "persona": "senior",
+        "category": "Senior Citizen Rights",
+        "desc": "Challenging firing based on age alone.",
+        "steps": []
+    },
+    {
+        "id": "n108",
+        "title": "State Benefits",
+        "persona": "senior",
+        "category": "Senior Citizen Rights",
+        "desc": "Accessing free healthcare and transport cards.",
+        "steps": []
+    },
+    {
+        "id": "n109",
+        "title": "Reverse Mortgage",
+        "persona": "senior",
+        "category": "Senior Citizen Rights",
+        "desc": "Understanding legal risks and benefits.",
+        "steps": []
+    },
+    {
+        "id": "n110",
+        "title": "Legal Aid",
+        "persona": "senior",
+        "category": "Senior Citizen Rights",
+        "desc": "Accessing free senior-citizen lawyers.",
+        "steps": []
+    }
+]

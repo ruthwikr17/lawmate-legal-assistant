@@ -1,0 +1,16 @@
+com/lawmate/backend/model/LawGist$LawGistBuilder.class
+com/lawmate/backend/repository/LawGistRepository.class
+com/lawmate/backend/service/AIServiceClient.class
+com/lawmate/backend/service/AIServiceClient$ChatRequest.class
+com/lawmate/backend/controller/UserRightsController.class
+com/lawmate/backend/model/User$UserType.class
+com/lawmate/backend/BackendApplication.class
+com/lawmate/backend/repository/UserRepository.class
+com/lawmate/backend/model/LawGist.class
+com/lawmate/backend/service/AIServiceClient$SourceDTO.class
+com/lawmate/backend/service/AIServiceClient$AIResponse.class
+com/lawmate/backend/model/User.class
+com/lawmate/backend/model/User$UserBuilder.class
+com/lawmate/backend/service/UserRightsService.class
+com/lawmate/backend/controller/LegalChatController.class
+com/lawmate/backend/controller/LegalChatController$ChatRequestDTO.class
