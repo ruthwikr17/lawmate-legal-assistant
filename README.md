@@ -1,86 +1,103 @@
-# LawMate: Jurisdiction-Aware Legal Intelligence
+# LawMate: Clinical Legal Intelligence for the Everyday Citizen
 
-(In progress) <br>
+> **LawMate** is a high-precision, jurisdiction-aware legal assistant designed to democratize access to the Indian Legal System. By combining structural RAG retrieval with a high-speed Hybrid Rule Engine, LawMate transforms complex statutory language into tactical, plain-English guidance at a **10th-grade reading level**.
 
-> LawMate is a Retrieval-Augmented Generation (RAG) pipeline designed to democratize Indian legal knowledge. It bridges the gap between complex statutory language and the everyday citizen by transforming raw legal texts into structured, plain-language, and highly actionable advice.  
+---
 
-Unlike generic AI chatbots that often hallucinate or provide geographically inaccurate advice, LawMate enforces jurisdiction-aware retrieval and a statute-first reasoning engine to ensure users receive accurate guidance tailored to their specific state or city.
+## 🏛️ Core Architectural Pillars
 
-## Core Capabilities
-**Hierarchical Jurisdiction Filtering:** Automatically maps user queries to the correct municipal, state, or central statutes, preventing cross-jurisdiction contamination.
+### 1. Hybrid Rule Engine (Statutory Anchors)
+LawMate identifies high-impact legal "intents" (Arrest, FIR, Fraud, Eviction) and anchors them to hardcoded, verified statutory rules (BNS 318, BNSS 173). This provides an absolute "Ground Truth" compass before the AI even begins its creative reasoning.
 
-**Statute-First Reasoning:** Prioritizes statutory law to define absolute rights, utilizing case law strictly for illustrative application.
+### 2. Advanced RAG (Precision Retrieval)
+- **Structural Section Chunking**: Documents are split by Section headers (e.g., "Section 420") rather than random tokens to preserve legal context.
+- **Hybrid Retrieval**: Combines BM25 (Keyword) + Sentence-Transformers (Semantic) search.
+- **Cross-Encoder Reranking**: Utilizes `ms-marco-MiniLM` to rerank results based on precise relevance.
 
-**Actionable Output Generation:** Bypasses dense academic explanations in favor of tactical next steps, clear power dynamics, and structured procedural guidance.
+### 3. Absolute Clarity Protocol (V63)
+LawMate is strictly tuned to a **10th-grade reading level**. It explicitly bans academic legal jargon ("indefensible", "void") in favor of everyday language that anyone can understand and act upon.
 
-**Domain Versatility:** Engineered to handle a wide spectrum of everyday legal challenges. The system dynamically adapts its reasoning to diverse areas of Indian law.
+### 4. Jurisdiction-Aware Logic
+A dedicated detection layer extracts city/state context from user queries and applies metadata filters to the vector store, preventing "legal contamination" from irrelevant state laws.
 
+---
 
-## System Architecture
-The project operates on a Directed Acyclic Graph (DAG) pipeline, utilizing the Gemini API for the LLM layer and ChromaDB for vector storage. <br>
+## ⚡ Key Features
 
-1. **Ingestion & Parsing:** Extracts and cleans text from central, state, and municipal PDFs.
+- **Ask AI**: Natural Language chat with conditional case-based reasoning.
+- **Legal Workflows**: Step-by-step procedural manifests for filing FIRs, Consumer Complaints, and more.
+- **Rights Awareness**: Interactive educational modules explaining fundamental rights with click-to-explore depth.
+- **Document Risk Analysis**: Integrated OCR service that extracts text from legal notices and identifies immediate risks and paper-trail gaps.
 
-2. **Semantic Chunking:** Splits text while preserving critical metadata (Document Type, Jurisdiction Level, State).
+---
 
-3. **Vector Indexing:** Embeds chunks using all-mpnet-base-v2 into a persistent ChromaDB instance.
+## 🛠️ Tech Stack
 
-4. **Hybrid Retrieval:** Re-ranks results based on vector similarity, keyword overlap, and source diversity, heavily weighted by jurisdiction.
+### Frontend (User Interface)
+- **Framework**: Next.js 14+ (App Router)
+- **Styling**: Vanilla CSS + Tailwind
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
 
-5. **Generation Layer:** Orchestrates the LLM to output litigation-aware, highly structured responses devoid of standard AI boilerplate.
+### Backend (AI & Logic)
+- **Core API**: FastAPI (Python)
+- **Vector Database**: ChromaDB (with MPNet-V2 Embeddings)
+- **LLM**: Gemini-1.5-Flash (Optimized for JSON-Architect logic)
+- **Rule Engine**: Custom Keyword-Intent Hybrid Mapper
 
+### Java Backend (Enterprise Context)
+- **Architecture**: Spring Boot (used for service orchestration and user rights data management).
 
-## Tech Stack
-**Core:** Python 3.10+
+---
 
-**Embeddings:** SentenceTransformers (all-mpnet-base-v2)
+## 📁 Repository Structure
 
-**Vector Store:** ChromaDB
-
-**LLM Orchestration:** Gemini API (gemini-2.5-flash)
-
-**Document Processing:** PyMuPDF / fitz
-
-
-## Project Structure
-
-```
+```text
 lawmate/
-├── db/                             # Persistent local storage for the ChromaDB vector index
-├── storage/
-│   └── processed_chunks/           # Directory for semantic text blocks and metadata
-├── scripts/
-│   ├── ingest_documents.py         # Handles raw PDF parsing and text cleaning
-│   ├── build_chunks.py             # Executes semantic splitting and metadata tagging
-│   ├── chunk_distribution_check.py # Validates corpus balance and document type distribution
-│   ├── index_chroma.py             # Manages embedding and vector database indexing
-│   └── pipeline/
-│       ├── retrieve.py             # Executes the hierarchical, jurisdiction-aware search logic
-│       └── generate_response.py    # Manages LLM prompting, tone constraints, and structured output
-└── README.md
+├── backend/            # Python FastAPI service (RAG, LLM, Rule Engine)
+│   ├── rules/          # Statutory Anchor configurations
+│   ├── retrieval/      # Hybrid Search & Reranking logic
+│   └── workflows/      # Procedural Manifest JSONs
+├── frontend/           # Next.js web application
+├── java-backend/       # Spring Boot enterprise layer
+├── scripts/            # Data pipeline (PDF -> Chunks -> Vector Store)
+└── storage/            # Processed legal corpus (JSONL)
 ```
 
-## Roadmap & Development Phases
-The system is actively being refined by Ruthvik at Sphoorthy Engineering College to shift from a functional prototype to a comprehensive legal assistant. Immediate priorities include:
+---
 
-**Phase 1: The Core RAG Engine (Completed)**
-* Jurisdiction-aware retrieval logic.
-* Semantic chunking and metadata filtering via ChromaDB.
-* LLM orchestration with custom tone and formatting constraints.
+## 🚀 Getting Started
 
-**Phase 2: Backend API Development (Next)**
-* Wrapping the core Python scripts into a robust backend framework (Node.js).
-* Setting up API endpoints for query ingestion, document uploads, and session management.
+### Prerequisites
+- Python 3.10+
+- Node.js 18+
+- Maven 3.8+ (for Java components)
+- `GEMINI_API_KEY` in root `.env`
 
-**Phase 3: Interactive Web Application (Upcoming)**
-* Developing a clean, public-facing frontend UI (React or Next.js).
-* Allowing users to input queries, upload legal notices for OCR, and receive live formatted advice directly in their browser.
+### Installation
+1. **Python AI Service**:
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   uvicorn main:app --port 8000
+   ```
 
-**Phase 4: Advanced Features (Future)**
-* **Workflow Automation:** Guided procedures for drafting consumer complaints, FIRs, and MACT claims, and other legal procedures.
-* **Confidence Scoring:** Implementing a dual-score system for retrieval accuracy and legal coverage confidence.
-* **Ecosystem Expansion:** Scaling the corpus to encompass all Indian states and adding multi-lingual support (Telugu/Hindi, etc).
+2. **Java Backend**:
+   ```bash
+   cd java-backend
+   mvn spring-boot:run
+   ```
 
+3. **Frontend**:
+   ```bash
+   cd frontend
+   npm install && npm run dev
+   ```
 
-## Disclaimer
-LawMate is an AI-based informational prototype developed for research and educational purposes. It does not constitute formal legal counsel and does not replace the advice of a licensed advocate. Users should consult qualified legal professionals before initiating any litigation or formal legal proceedings.
+---
+
+## ⚖️ Disclaimer
+LawMate is an AI-based informational platform for educational purposes. It does **not** constitute formal legal counsel. Users should consult a licensed advocate before initiating any legal proceedings.
+
+---
+*Developed by Ruthvik and LawMate contributors to make the Law accessible to everyone.*
