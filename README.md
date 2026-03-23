@@ -1,17 +1,17 @@
-# LawMate Legal Assistant
+# LawMate — Hybrid AI Legal Intelligence
 AI-powered legal assistant using RAG + rule-based reasoning for accurate legal guidance.
 
 ---
 
-## 2. Overview
+## Overview
 LawMate addresses the "legal accessibility gap" in India, where complex statutory language and procedural ambiguity often prevent citizens from exercising their rights. Traditional legal research tools are designed for professionals, leaving non-experts overwhelmed. LawMate solves this by translating the Indian Legal System into actionable, plain-language guidance. Our approach is unique because it does not rely solely on LLM creativity; it anchors AI reasoning to verified statutory rules (Statutory Anchors) and filters results using jurisdiction-aware logic to ensure precision and reliability.
 
 ---
 
-## 3. Features
+## Features
 
 ### AI Capabilities
-- Absolute Clarity Protocol: Generates responses at a 10th-grade reading level.
+- Absolute Clarity Protocol: Generates responses using simple, plain language that is accessible to everyone.
 - Banned Jargon: Automatically replaces complex legal terms with everyday equivalents.
 - Document Intelligence: OCR-driven risk analysis for legal notices and PDFs.
 
@@ -34,7 +34,7 @@ LawMate addresses the "legal accessibility gap" in India, where complex statutor
 
 ---
 
-## 4. Architecture
+## Architecture
 
 ```mermaid
 graph TD
@@ -50,7 +50,7 @@ graph TD
     
     RuleEngine --> RulesDB[(Verified Rules)]
     Retriever --> ChromaDB[(Chroma Vector DB)]
-    Generator --> GeminiAPI[Google Gemini 1.5 Flash]
+    Generator --> GeminiAPI[Google Gemini API]
     
     subgraph Data Pipeline
         PDFs[PDF Statutes] --> Parser[OCR / PyMuPDF]
@@ -61,7 +61,7 @@ graph TD
 
 ---
 
-## 5. Core Concepts
+## Core Concepts
 
 ### Retrieval-Augmented Generation (RAG)
 In LawMate, RAG is not just a search tool. It serves as a dynamic knowledge injector that provides the LLM with the exact statutory text required for a query. This minimizes hallucinations by forcing the model to cite specific "Sources" from the verified corpus.
@@ -74,7 +74,7 @@ The Rule Engine provides the "Anchor" (the law), while the RAG system provides t
 
 ---
 
-## 6. Tech Stack
+## Tech Stack
 
 ### Backend
 - Language: Java 17
@@ -84,7 +84,7 @@ The Rule Engine provides the "Anchor" (the law), while the RAG system provides t
 ### AI Layer
 - Language: Python 3.10+
 - Framework: FastAPI
-- Model: Google Gemini 1.5 Flash
+- Model: Google Gemini API
 - OCR: EasyOCR, PyMuPDF (fitz)
 
 ### Database
@@ -98,7 +98,7 @@ The Rule Engine provides the "Anchor" (the law), while the RAG system provides t
 
 ---
 
-## 7. Project Structure
+## Project Structure
 
 ```text
 lawmate/
@@ -120,7 +120,7 @@ lawmate/
 
 ---
 
-## 8. Setup Instructions
+## Setup Instructions
 
 ### 1. Repository Setup
 Clone the repository and create a .env file in the root directory.
@@ -130,7 +130,23 @@ cd lawmate
 echo "GEMINI_API_KEY=your_api_key_here" > .env
 ```
 
-### 2. Python AI Service
+### 2. Vector Database Setup
+Since the legal corpus and indexed database are not included in the repository, you must run the data pipeline to initialize your local ChromaDB instance.
+1. Place your raw PDF statutes in `storage/raw_documents/`.
+2. Run the ingestion script to convert PDFs to searchable text:
+   ```bash
+   python scripts/pipeline/ingest_documents.py
+   ```
+3. Run the chunking script to create semantic legal blocks:
+   ```bash
+   python scripts/pipeline/build_chunks.py
+   ```
+4. Run the indexing script to embed and save to ChromaDB:
+   ```bash
+   python scripts/pipeline/index_chroma.py
+   ```
+
+### 3. Python AI Service
 ```bash
 cd backend
 pip install -r requirements.txt
@@ -138,14 +154,14 @@ python -m spacy download en_core_web_sm
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
-### 3. Java Backend
+### 4. Java Backend
 ```bash
 cd java-backend
 mvn clean install
 mvn spring-boot:run
 ```
 
-### 4. Frontend
+### 5. Frontend
 ```bash
 cd frontend
 npm install
@@ -154,7 +170,7 @@ npm run dev
 
 ---
 
-## 9. Workflow
+## Workflow
 
 1. **User Query**: The user asks a question in the Next.js UI.
 2. **Orchestration**: The request hits the Java Backend, which attaches user context (persona, jurisdiction).
@@ -165,7 +181,7 @@ npm run dev
 
 ---
 
-## 10. Example Output
+## Example Output
 
 ### User Query: "What happens if the police don't file my FIR?"
 
@@ -182,11 +198,11 @@ Under **Section 173 of the Bharatiya Nagarik Suraksha Sanhita (BNSS)**, the poli
 
 ---
 
-## 11. Evaluation & Research Angle
+## Evaluation & Research Angle
 
 ### Performance Metrics
 - **Precision@3**: Evaluated at 88% for statutory retrieval accuracy.
-- **Clarity Score**: Measured using the Flesch-Kincaid Grade Level; LawMate consistently scores between 8.5 and 10.2.
+- **Clarity Score**: Measured using the Flesch-Kincaid Grade Level; LawMate consistently scores highly for readability.
 - **Latency**: End-to-end response time averaged at 2.4s (standard) and 12s (full PDF OCR).
 
 ### Research Focus: Absolute Clarity
@@ -194,26 +210,26 @@ Our primary research focus is the "Absolute Clarity Protocol"—a methodology fo
 
 ---
 
-## 12. Limitations
+## Limitations
 - **Hallucination Risk**: Despite RAG, the LLM may occasionally misinterpret the relationship between two conflicting laws.
 - **Scanned Document Quality**: OCR performance drops significantly with low-resolution or handwritten notices.
 - **Statutory Updates**: The model depends on the frequency of vector store updates to reflect the latest legal amendments.
 
 ---
 
-## 13. Future Work
+## Future Work
 - **Multi-lingual Support**: Extending the Absolute Clarity Protocol to Hindi and regional Indian languages.
 - **Case-Law Integration**: Incorporating a larger corpus of High Court and Supreme Court precedents.
 - **Automated Filing**: Generating drafted response letters and legal forms directly from the AI analysis.
 
 ---
 
-## 15. License
+## License
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-## 16. Author
+## Author
 **Ruthvik**
 Lead Developer & Research Architect
 [GitHub: ruthwikr17](https://github.com/ruthwikr17)
