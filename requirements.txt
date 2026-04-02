@@ -4,3 +4,16 @@ pdfplumber
 langchain
 tiktoken
 langchain-text-splitters
+python-dotenv
+google-generativeai
+rank_bm25
+fpdf2
+pytest
+fastapi
+uvicorn
+pydantic
+python-multipart
+google-api-core
+grpcio
+pyyaml
+tqdm

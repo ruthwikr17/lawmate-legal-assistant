@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "query": "What is the maximum rent increase allowed per year in Mumbai/Maharashtra?",
+    "ground_truth": "Maharashtra Rent Control Act Section 11",
+    "direct_llm": "ERROR: API Failure after retries",
+    "rag_only": "LawMate encountered an internal logic error. Please try again.",
+    "hybrid": "LawMate encountered an internal logic error. Please try again."
+  }
+]

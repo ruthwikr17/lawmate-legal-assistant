@@ -37,25 +37,45 @@ class LLMService:
 
     def detect_jurisdiction(self, query: str) -> Dict[str, Optional[str]]:
         """
-        Rule-based jurisdiction detection to save API quota.
+        Rock-solid jurisdiction detection.
         """
-        q = query.lower()
+        q = query.lower().strip()
         
-        # Major Indian Cities
-        cities = ["mumbai", "delhi", "bangalore", "hyderabad", "chennai", "kolkata", "pune", "ahmedabad"]
-        # Indian States
-        states = ["maharashtra", "telangana", "karnataka", "tamil nadu", "west bengal", "gujarat", "punjab", "haryana", "uttar pradesh", "bihar", "rajasthan"]
+        # Major Indian Cities & States (Expanded)
+        cities = {
+            "mumbai": "Mumbai", "bombay": "Mumbai",
+            "delhi": "Delhi", "ncr": "Delhi", "noida": "Delhi", "gurgaon": "Delhi",
+            "bangalore": "Bangalore", "bengaluru": "Bangalore",
+            "hyderabad": "Hyderabad",
+            "chennai": "Chennai", "madras": "Chennai",
+            "kolkata": "West Bengal", "calcutta": "West Bengal",
+            "pune": "Pune",
+            "ahmedabad": "Gujarat"
+        }
+        states = {
+            "maharashtra": "Maharashtra", "telangana": "Telangana",
+            "karnataka": "Karnataka", "tamil nadu": "Tamil Nadu",
+            "west bengal": "West Bengal", "gujarat": "Gujarat",
+            "punjab": "Punjab", "haryana": "Haryana",
+            "uttar pradesh": "Uttar Pradesh", "up": "Uttar Pradesh",
+            "bihar": "Bihar", "rajasthan": "Rajasthan", "kerala": "Kerala"
+        }
         
-        for city in cities:
-            if city in q:
-                return {"level": "city", "region": city.capitalize()}
+        # Check for State matches first (broader)
+        for s_key, s_name in states.items():
+            if s_key in q:
+                return {"level": "state", "region": s_name}
                 
-        for state in states:
-            if state in q:
-                return {"level": "state", "region": state.capitalize()}
+        # Check for City matches
+        for c_key, c_name in cities.items():
+            if c_key in q:
+                # Map some cities directly to their states for better retrieval filtering
+                state_map = {"Mumbai": "Maharashtra", "Pune": "Maharashtra", "Bangalore": "Karnataka", "Hyderabad": "Telangana", "Chennai": "Tamil Nadu"}
+                region = state_map.get(c_name, c_name)
+                return {"level": "city" if c_name not in ["West Bengal", "Gujarat"] else "state", "region": region}
                 
         return {"level": "central", "region": None}
 
-    def generate_answer(self, user_query: str, context: str, conversation_history: list = None) -> str:
-        # This will be used in the generator service
-        pass
+    def generate_answer(self, user_query: str, context: str, conversation_history: List = None) -> str:
+        # This is implemented in the generator service
+        return ""

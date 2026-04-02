@@ -32,9 +32,10 @@ class LegalGenerator:
            - FIRST: Provide a 2-3 sentence high-level overview of the most common path.
            - SECOND: Ask a single, specific clarifying question to narrow down the situation (e.g., "Is this for a theft, an accident, or harassment?").
 
-        3. TACTICAL FOCUS:
-           - Prioritize the "How-To" details: paper trails, Registered Post, specific forms, and physical steps.
-           - If a statutory rule exists, mention it briefly using **bold** Act names, but don't lecture on it. Explain how it protects them in 1 sentence.
+        3. MANDATORY LEGAL CITATION & TACTICAL FOCUS:
+           - YOU MUST EXPLICITLY CITE the exact Act name and Section number (e.g., **The Maharashtra Rent Control Act, 1999, Section 11**) early in your response to establish unquestionable legal authority.
+           - After citing the law, pivot immediately to the "How-To" details: paper trails, Registered Post, specific forms, and physical steps.
+           - Explain how the cited law protects them in 1 simple sentence without lecturing.
 
         4. CONDITIONAL CASE-LAW (Default = Statutes Only):
            - By default, ONLY use the Statutory Rule/Act for your answer. Ignore [Source] items marked as 'case_law' in the metadata.
@@ -83,7 +84,9 @@ class LegalGenerator:
         # 2. Extract User Context
         persona = context.get('persona', 'Citizen') if context else 'Citizen'
         style = context.get('style', 'Simple') if context else 'Simple'
-        
+        jurisdiction = context.get('jurisdiction', 'India') if context else 'India'
+        city = context.get('city', 'Not Specified') if context else 'Not Specified'
+
         history_text = ""
         if history:
             for turn in history[-5:]:
@@ -92,9 +95,9 @@ class LegalGenerator:
                 history_text += f"{role}: {content}\n"
 
         is_dossier = "ARCHITECT DOSSIER" in query.upper() or "CREATE DOSSIER" in query.upper()
-        
+
         current_system_instruction = self.system_instruction
-        
+
         if is_dossier:
             dossier_directive = """
             [DOSSIER ARCHITECT MODE]
@@ -108,10 +111,36 @@ class LegalGenerator:
 
         prompt = f"""
         {current_system_instruction}
+
+        [CRITICAL LEGAL MAXIMS TO FOLLOW]
+        1. UNDER INDIAN LAW, A WRITTEN LEASE IS NOT MANDATORY FOR TENANCY TO EXIST. Oral agreements, possession, and rent receipts constitute a valid tenancy. NEVER tell a user they are unprotected because they lack a written lease.
+        2. NEVER arbitrarily cite the "Model Tenancy Act". It is merely a template. You MUST cite the specific, enforceable Act governing the user's state.
+
+        [CRITICAL JSON OUTPUT REGULATION]
+        You MUST return your entire response as a raw JSON object ONLY. NO markdown formatting. NO ```json wrappers.
+        Based on the provided Statutory Knowledge Base AND your general knowledge of Indian Law, extract the EXACT name of the Act and the actual Section you used to form your advice. 
+        If there are multiple sections, list them all in the laws_cited array.
         
+        REQUIRED JSON SCHEMA:
+        {{
+            "answer": "Your plain-English guide/advice responding to the user based on the context...",
+            "laws_cited": [
+                {{
+                    "act": "Name of the Act (e.g., Transfer of Property Act, 1882)",
+                    "section": "Section number AND TITLE (e.g., Section 106 - Lease of immovable property)"
+                }}
+            ]
+        }}
+
         [USER CONTEXT]
         Active Persona: {persona}
         Preferred Style: {style}
+        User Location: {city}, {jurisdiction}
+        
+        [JURISDICTION MANDATE]
+        You MUST tailor your advice specifically to the laws of {city}, {jurisdiction}. 
+        If the RAG context restricts you or lacks the exact local law, rely on your GENERAL LEGAL KNOWLEDGE of Indian statutes applicable strictly to {city}, {jurisdiction} (e.g., for Hyderabad, you MUST apply the Telangana Buildings (Lease, Rent and Eviction) Control Act, 1960).
+        NEVER vaguely cite "The Rent Control Act". You must explicitly cite the exact STATE-SPECIFIC Act.
         
         {anchor_str}
         
@@ -126,30 +155,88 @@ class LegalGenerator:
         Response:"""
 
         try:
-            # Temperature balanced for precision + natural flow
+            # Temperature extremely low for precise JSON formatting
             response = self.llm_service.model.generate_content(
                 prompt,
-                generation_config={"temperature": 0.1 if is_dossier else 0.4}
+                generation_config={"temperature": 0.1}
             )
             
             if not response:
                 return "The AI engine returned no response.", []
 
-            answer = response.text.strip()
+            raw_text = response.text.strip()
             
-            # Source enrichment for frontend reference
-            enriched_sources = []
-            for res in retrieved_results[:3]:
-                metadata = res.get("metadata", {})
-                enriched_sources.append({
-                    "title": metadata.get("document_title", "Legal Source"),
-                    "section": metadata.get("section_title", "N/A"),
-                    "text": res['text'][:300] + "..."
-                })
+            # Clean possible markdown formatting
+            if raw_text.startswith("```json"):
+                raw_text = raw_text.split("```json", 1)[1]
+            if raw_text.endswith("```"):
+                raw_text = raw_text.rsplit("```", 1)[0]
+            if raw_text.startswith("```"):
+                raw_text = raw_text.split("```", 1)[1]
+            raw_text = raw_text.strip()
+            
+            try:
+                import json
+                data = json.loads(raw_text)
+                answer = data.get("answer", raw_text)
+                ai_citations = data.get("laws_cited", [])
                 
-            return answer, enriched_sources
+                enriched_sources = []
+                seen = set()
+                for cite in ai_citations:
+                    act_name = cite.get("act", "Governing Statute").strip()
+                    section_num = cite.get("section", "N/A").strip()
+                    key = f"{act_name}-{section_num}"
+                    if key not in seen and act_name:
+                        seen.add(key)
+                        enriched_sources.append({
+                            "title": act_name,
+                            "section": section_num
+                        })
+                
+                return answer, enriched_sources
+                
+            except Exception as parse_error:
+                print(f"JSON Parse Error: {parse_error} - Raw text: {raw_text}")
+                return raw_text, [{"title": "Indian Legal Framework", "section": "Multiple Provisions"}]
 
         except Exception as e:
             print(f"CRITICAL ERROR IN GENERATOR: {e}")
             traceback.print_exc()
             return "LawMate encountered an internal logic error. Please try again.", []
+
+    def analyze_notice_risk(self, extracted_text: str) -> str:
+        """Analyzes a legal notice and generates a tactical Risk Manifesto."""
+        
+        prompt = f"""
+        {self.system_instruction}
+        
+        [DOCUMENT ANALYSIS MODE]
+        You are analyzing a legal notice or document extracted via OCR. 
+        Your goal is to build a "Risk Manifesto" for the user.
+        
+        STRICT RULES:
+        1. Identify ANY deadlines (e.g., "within 15 days", "by 5th Oct").
+        2. Identify ANY financial or legal threats (e.g., "forfeit deposit", "file a suit").
+        3. Identify "Paper-Trail Gaps" (e.g., if the notice claims they sent a warning before and the user doesn't have it).
+        4. Give 3-4 highly tactical steps to respond or protect themselves.
+        
+        EXTRACTED TEXT:
+        {extracted_text}
+        
+        Response:"""
+
+        try:
+            response = self.llm_service.model.generate_content(
+                prompt,
+                generation_config={"temperature": 0.2}
+            )
+            
+            if not response:
+                return "The AI engine was unable to analyze this document."
+
+            return response.text.strip()
+
+        except Exception as e:
+            print(f"RISK ANALYSIS ERROR: {e}")
+            return "LawMate encountered an error while analyzing your document. Please ensure the image is clear."

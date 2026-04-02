@@ -41,6 +41,132 @@
       "keywords": ["maintenance", "alimony", "support money", "wife expense"],
       "rule": "BNSS Section 144 (formerly CrPC 125)",
       "description": "A person with sufficient means must provide maintenance to their wife, children, or parents if they cannot support themselves."
+    },
+    {
+      "intent": "maharashtra_rent_control",
+      "keywords": ["rent increase", "mumbai", "maharashtra", "standard rent"],
+      "rule": "Maharashtra Rent Control Act, 1999 (Section 11)",
+      "description": "Landlords in Maharashtra can increase standard rent by 4% per annum for protected tenancies. Newer buildings follow the agreed lease terms."
+    },
+    {
+      "intent": "karnataka_shops_hours",
+      "keywords": ["bangalore", "karnataka", "working hours", "shops", "establishment"],
+      "rule": "Karnataka Shops and Commercial Establishments Act, 1961 (Section 7)",
+      "description": "Daily work limit is 9 hours, weekly 48 hours. Restaurants/Shops can stay open 24/7 if they register under the 2021 notification."
+    },
+    {
+      "intent": "delhi_lease_registration",
+      "keywords": ["delhi", "lease agreement", "registration fee", "penalty", "not registering"],
+      "rule": "Registration Act, 1908 (Section 17) / Delhi Rent Control",
+      "description": "Leases for 12 months or more must be registered in Delhi. Unregistered leases are not admissible as evidence in court."
+    },
+    {
+      "intent": "telangana_professional_tax",
+      "keywords": ["telangana", "professional tax", "slabs", "deduction"],
+      "rule": "Telangana Tax on Professions Act, 1987",
+      "description": "Mandatory for all employees earning above 15,000 INR per month. Maximum cap is 200 INR/month."
+    },
+    {
+      "intent": "west_bengal_eviction",
+      "keywords": ["west bengal", "kolkata", "eviction", "notice period"],
+      "rule": "West Bengal Premises Tenancy Act, 1997",
+      "description": "Landlord must give 1-month notice for termination. Eviction requires specific grounds like default for 3 consecutive months."
+    },
+    {
+      "intent": "maharashtra_gift_deed",
+      "keywords": ["gift deed", "pune", "relative", "stamp duty"],
+      "rule": "Maharashtra Stamp Act (Article 34)",
+      "description": "Stamp duty for gifting properties to blood relatives is a flat 200 INR fee in Maharashtra, plus a 1% registration fee up to 30,000 INR."
+    },
+    {
+      "intent": "up_stray_cattle",
+      "keywords": ["stray cattle", "uttar pradesh", "nuisance", "cow", "animals"],
+      "rule": "UP Cattle Trespass Act / Control of Nuisance Rules",
+      "description": "Local municipal bodies are responsible for impounding stray cattle. Owners can be fined under the Cattle Trespass Act."
+    },
+    {
+      "intent": "tamil_nadu_women_night",
+      "keywords": ["night shift", "women", "tamil nadu", "factory"],
+      "rule": "Tamil Nadu Factories Rules (Rule 61)",
+      "description": "Women can work night shifts (7 PM - 6 AM) if independent transportation and security measures are provided by the employer."
+    },
+    {
+      "intent": "telangana_plastic_ban",
+      "keywords": ["plastic bag", "hyderabad", "fine", "ban"],
+      "rule": "Telangana State Plastic Waste Management Rules",
+      "description": "Use of plastic bags below 120 microns is banned. GHMC imposes spot fines from 500 to 5,000 INR."
+    },
+    {
+      "intent": "karnataka_kannada_board",
+      "keywords": ["kannada", "signboard", "bangalore", "karnataka", "language"],
+      "rule": "Karnataka Language Comprehensive Development Act, 2022",
+      "description": "At least 60% of the signboard must be in Kannada script, displayed at the top or prominent position."
+    },
+    {
+      "intent": "delhi_dry_days",
+      "keywords": ["dry day", "alcohol", "delhi", "election"],
+      "rule": "Delhi Excise Rules, 2010",
+      "description": "Delhi has 3 fixed national dry days (Jan 26, Aug 15, Oct 2) plus specific festival/election days notified by the Commissioner."
+    },
+    {
+      "intent": "kerala_public_smoking",
+      "keywords": ["smoking", "public", "kerala", "police"],
+      "rule": "Cigarettes and Other Tobacco Products Act (COTPA) / Kerala Police Act",
+      "description": "Smoking in public places is a fineable offense. Under COTPA, the fine is up to 200 INR. Police can also charge for public nuisance."
+    },
+    {
+      "intent": "up_security_deposit",
+      "keywords": ["security deposit", "noida", "up", "rent"],
+      "rule": "UP Regulation of Urban Premises Tenancy Act, 2021",
+      "description": "Security deposit is capped at a maximum of 2 months' rent for residential properties and 6 months for commercial."
+    },
+    {
+      "intent": "maharashtra_marriage_registration",
+      "keywords": ["marriage", "mumbai", "register", "certificate"],
+      "rule": "Maharashtra Regulation of Marriage Act, 1998",
+      "description": "Marriage must be registered at the local BMC ward office. Requires 3 witnesses and proof of wedding ceremony."
+    },
+    {
+      "intent": "haryana_firecrackers",
+      "keywords": ["firecrackers", "gurgaon", "diwali", "ban"],
+      "rule": "Haryana State Pollution Control Board Orders",
+      "description": "Only 'green crackers' are allowed in NCR regions like Gurgaon. Use restricted to a 2-hour window on Diwali (8 PM - 10 PM)."
+    },
+    {
+      "intent": "bihar_minimum_wage",
+      "keywords": ["minimum wage", "bihar", "unskilled"],
+      "rule": "Bihar Minimum Wages Act / Local Notification",
+      "description": "Daily wages are revised semi-annually. For unskilled labor, the latest rate (Oct 2024) is approximately 418 INR/day."
+    },
+    {
+      "intent": "gujarat_vehicle_search",
+      "keywords": ["search", "vehicle", "police", "gujarat", "warrant"],
+      "rule": "Gujarat Police Act / BNSS Section 105",
+      "description": "Police can search vehicles without a warrant if they have 'reason to believe' an offense is happening (Prohibition check). Seizure memo is mandatory."
+    },
+    {
+      "intent": "tamil_nadu_garbage",
+      "keywords": ["garbage", "chennai", "fine", "littering"],
+      "rule": "Chennai City Municipal Corporation Act / SWM Rules",
+      "description": "Littering in public places in Chennai attracts spot fines starting from 500 INR for individuals."
+    },
+    {
+      "intent": "maharashtra_closing_times",
+      "keywords": ["closing time", "pune", "restaurant", "late night"],
+      "rule": "Maharashtra Shops and Establishments Act (2017 Rules)",
+      "description": "Restaurants in Pune generally must close by 1:30 AM per local police orders, though the Act allows 24/7 with specific licenses."
+    },
+    {
+      "intent": "karnataka_pahani",
+      "keywords": ["pahani", "rtc", "karnataka", "land record"],
+      "rule": "Karnataka Land Revenue Act (Bhoomi Portal)",
+      "description": "RTC (Pahani) records are available online via the Bhoomi Portal using survey numbers. Essential for verifying ownership."
+    },
+    {
+      "intent": "delhi_mutation",
+      "keywords": ["mutation", "delhi", "property", "record"],
+      "rule": "Delhi Land Revenue Act / MCD Guidelines",
+      "description": "Mutation is mandatory to update tax records after property transfer. It does not prove title but is essential for municipal services."
     }
   ]
 }

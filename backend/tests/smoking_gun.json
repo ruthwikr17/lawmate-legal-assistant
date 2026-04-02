@@ -1,0 +1,8 @@
+[
+  {
+    "id": 1,
+    "query": "What is the maximum rent increase allowed per year in Mumbai/Maharashtra?",
+    "ground_truth": "Maharashtra Rent Control Act Section 11",
+    "expected_action": "State the 4% per annum cap for protected tenancies."
+  }
+]

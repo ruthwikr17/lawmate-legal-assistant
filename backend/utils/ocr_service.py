@@ -3,54 +3,61 @@
 import easyocr
 import cv2
 import numpy as np
+import fitz  # PyMuPDF
 from pathlib import Path
 from typing import List, Dict
 
 class OCRService:
     def __init__(self):
-        # Initialize reader (English as default for legal docs in India)
-        # gpu=False for compatibility, but can be enabled if user has GPU
+        # Initialize reader (English as default)
         print("Initializing OCR (EasyOCR)...")
         self.reader = easyocr.Reader(['en'], gpu=False)
 
-    def extract_text_from_image(self, image_input) -> str:
+    def extract_text(self, file_bytes: bytes) -> str:
         """
-        Extracts text from an image (bytes or path).
+        Extracts text from raw bytes (Image or PDF).
         """
         try:
-            results = self.reader.readtext(image_input)
-            # Combine text results
-            extracted_text = " ".join([res[1] for res in results])
-            return extracted_text
+            # 1. More robust PDF detection (check first 1024 bytes)
+            is_pdf = b"%PDF-" in file_bytes[:1024]
+            
+            if is_pdf:
+                print("DEBUG: Detected PDF file.")
+                return self._extract_from_pdf(file_bytes)
+            
+            # 2. Otherwise treat as Image
+            print("DEBUG: Treating file as Image.")
+            return self._extract_from_image(file_bytes)
+            
         except Exception as e:
-            print(f"OCR Error: {e}")
+            print(f"CRITICAL EXTRACTION ERROR: {e}")
+            import traceback
+            traceback.print_exc()
             return ""
 
-    def analyze_document_risk(self, text: str) -> Dict:
-        """
-        Basic risk analysis for legal documents.
-        (More advanced logic can be added in Phase 4)
-        """
-        risk_keywords = {
-            "sudden_eviction": ["eviction", "notice", "vacate", "terminate"],
-            "financial_penalty": ["penalty", "fine", "forfeit", "interest"],
-            "unfair_terms": ["unilateral", "sole discretion", "non-refundable"]
-        }
+    def _extract_from_pdf(self, pdf_bytes: bytes) -> str:
+        """Extracts text from PDF (Searchable or Scanned)."""
+        doc = fitz.open(stream=pdf_bytes, filetype="pdf")
+        full_text = []
         
-        detected_risks = []
-        text_lower = text.lower()
-        
-        for risk, keywords in risk_keywords.items():
-            found = [k for k in keywords if k in text_lower]
-            if found:
-                detected_risks.append({"type": risk, "keywords": found})
-                
-        return {
-            "original_text": text,
-            "detected_risks": detected_risks,
-            "summary": "Document processed and scanned for risk markers."
-        }
+        for page in doc:
+            text = page.get_text().strip()
+            if text:
+                full_text.append(text)
+            else:
+                # Scanned PDF Fallback: Render to Image
+                pix = page.get_pixmap(matrix=fitz.Matrix(2, 2))  # High-res
+                img_bytes = pix.tobytes("png")
+                ocr_text = self._extract_from_image(img_bytes)
+                if ocr_text:
+                    full_text.append(ocr_text)
+                    
+        return "\n".join(full_text).strip()
+
+    def _extract_from_image(self, image_bytes: bytes) -> str:
+        """Extracts text from raw image bytes using EasyOCR."""
+        results = self.reader.readtext(image_bytes)
+        return " ".join([res[1] for res in results]).strip()
 
 if __name__ == "__main__":
-    # Test OCR (requires sample image)
     pass

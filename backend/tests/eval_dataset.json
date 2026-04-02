@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "query": "What is the maximum rent increase allowed per year in Mumbai/Maharashtra?",
+    "ground_truth_section": "Section 11 Maharashtra Rent Control Act",
+    "category": "State Law (Maharashtra)",
+    "expected_action": "Max 4% per annum"
+  },
+  {
+    "id": 2,
+    "query": "In Bangalore, what are the working hours for shops and establishments?",
+    "ground_truth_section": "Karnataka Shops and Commercial Establishments Act",
+    "category": "State Law (Karnataka)",
+    "expected_action": "9 hours per day / 48 hours per week"
+  },
+  {
+    "id": 3,
+    "query": "What is the penalty for not registering a lease agreement in Delhi?",
+    "ground_truth_section": "Registration Act / Delhi Rent Control",
+    "category": "State Law (Delhi)",
+    "expected_action": "Lease > 11 months must be registered; inadmissible in court otherwise"
+  },
+  {
+    "id": 4,
+    "query": "Is professional tax mandatory for employees in Telangana?",
+    "ground_truth_section": "Telangana Tax on Professions Act",
+    "category": "State Law (Telangana)",
+    "expected_action": "Yes, mandatory deduction by employer"
+  },
+  {
+    "id": 5,
+    "query": "What is the notice period for terminating a tenant in West Bengal?",
+    "ground_truth_section": "West Bengal Premises Tenancy Act",
+    "category": "State Law (West Bengal)",
+    "expected_action": "Minimum 1 month notice"
+  },
+  {
+    "id": 6,
+    "query": "How much stamp duty is required for property gift to a relative in Pune?",
+    "ground_truth_section": "Maharashtra Stamp Act",
+    "category": "State Law (Maharashtra)",
+    "expected_action": "Reduced rate (approx 200-500 INR or 3% depending on relation)"
+  },
+  {
+    "id": 7,
+    "query": "What are the rules for 'Pagal' (Stray) cattle nuisance in Uttar Pradesh?",
+    "ground_truth_section": "UP Cattle Trespass Act",
+    "category": "State Law (UP)",
+    "expected_action": "Seizure of cattle and fine on owner"
+  },
+  {
+    "id": 8,
+    "query": "Can a woman work night shifts in a factory in Tamil Nadu?",
+    "ground_truth_section": "Tamil Nadu Factories Rules",
+    "category": "State Law (Tamil Nadu)",
+    "expected_action": "Legal with 'Safety and Transport' guardrails (7PM to 6AM)"
+  },
+  {
+    "id": 9,
+    "query": "What is the penalty for using plastic bags in Hyderabad?",
+    "ground_truth_section": "Telangana State Plastic Ban Rules",
+    "category": "State Law (Telangana)",
+    "expected_action": "Fines starting from 500 up to 5000 INR"
+  },
+  {
+    "id": 10,
+    "query": "Is it mandatory to have a Kannada signboard for shops in Bangalore?",
+    "ground_truth_section": "Karnataka Language Comprehensive Development Act",
+    "category": "State Law (Karnataka)",
+    "expected_action": "Yes, 60% Kannada on signboards mandatory"
+  },
+  {
+    "id": 11,
+    "query": "What are the dry days for alcohol in Delhi?",
+    "ground_truth_section": "Delhi Excise Rules",
+    "category": "State Law (Delhi)",
+    "expected_action": "National holidays + specific religious dates"
+  },
+  {
+    "id": 12,
+    "query": "Can the police in Kerala arrest someone for public smoking?",
+    "ground_truth_section": "Kerala Police Act / COTPA",
+    "category": "State Law (Kerala)",
+    "expected_action": "Fine and spot penalty"
+  },
+  {
+    "id": 13,
+    "query": "What is the maximum security deposit a landlord can ask in Noida?",
+    "ground_truth_section": "UP Regulation of Urban Premises Tenancy Act",
+    "category": "State Law (UP)",
+    "expected_action": "Maximum 2 months' rent"
+  },
+  {
+    "id": 14,
+    "query": "How to register a marriage in Mumbai?",
+    "ground_truth_section": "Maharashtra Regulation of Marriage Act",
+    "category": "State Law (Maharashtra)",
+    "expected_action": "Apply to Ward Office / Registrar within 90 days"
+  },
+  {
+    "id": 15,
+    "query": "Are firecrackers banned in Gurgaon during Diwali?",
+    "ground_truth_section": "Haryana State Pollution Control Board Orders",
+    "category": "State Law (Haryana)",
+    "expected_action": "Regularly banned/restricted to Green Crackers"
+  },
+  {
+    "id": 16,
+    "query": "What is the minimum wage for unskilled labor in Bihar?",
+    "ground_truth_section": "Bihar Minimum Wages Notification",
+    "category": "State Law (Bihar)",
+    "expected_action": "Varies by year/category (approx 380-450 INR/day)"
+  },
+  {
+    "id": 17,
+    "query": "Can the police in Gujarat search a vehicle without a warrant?",
+    "ground_truth_section": "Gujarat Police Act",
+    "category": "State Law (Gujarat)",
+    "expected_action": "Yes, if they suspect illegal transport (Liquor/Gambling)"
+  },
+  {
+    "id": 18,
+    "query": "What is the penalty for throwing garbage on the road in Chennai?",
+    "ground_truth_section": "Chennai City Municipal Act",
+    "category": "State Law (Tamil Nadu)",
+    "expected_action": "On-the-spot fine (approx 500 INR)"
+  },
+  {
+    "id": 19,
+    "query": "Is there a limit on how many late-night hours a restaurant can stay open in Pune?",
+    "ground_truth_section": "Maharashtra Shops and Establishments Act",
+    "category": "State Law (Maharashtra)",
+    "expected_action": "Varies by zone; usually up to 1:30 AM or 24/7 in IT zones"
+  },
+  {
+    "id": 20,
+    "query": "How to apply for a copy of a 'Pahani' (Land Record) in Karnataka?",
+    "ground_truth_section": "Karnataka Land Revenue Act (Bhoomi Portal)",
+    "category": "State Law (Karnataka)",
+    "expected_action": "Apply via Bhoomi online portal or RTC center"
+  },
+  {
+    "id": 21,
+    "query": "What is the rule for property mutation in Delhi?",
+    "ground_truth_section": "MCD / DDA Guidelines",
+    "category": "State Law (Delhi)",
+    "expected_action": "Mandatory to record ownership change for tax"
+  },
+  {
+    "id": 22,
+    "query": "Can I have a pet dog in a flat in Kolkata?",
+    "ground_truth_section": "West Bengal Municipal Act / AWBI Guidelines",
+    "category": "State Law (West Bengal)",
+    "expected_action": "Yes, Societies cannot ban pets legally"
+  },
+  {
+    "id": 23,
+    "query": "What is the fine for open urination in Jaipur?",
+    "ground_truth_section": "Rajasthan Municipalities Act",
+    "category": "State Law (Rajasthan)",
+    "expected_action": "Spot fine under cleanliness bylaws"
+  },
+  {
+    "id": 24,
+    "query": "What is the law for '7/12 Utara' in Maharashtra?",
+    "ground_truth_section": "Maharashtra Land Revenue Code",
+    "category": "State Law (Maharashtra)",
+    "expected_action": "Primary document for rural land ownership/cultivation"
+  },
+  {
+    "id": 25,
+    "query": "What is the limit for filing a noise complaint in Bangalore?",
+    "ground_truth_section": "Karnataka State Environmental Rules",
+    "category": "State Law (Karnataka)",
+    "expected_action": "Strictly no loudspeakers after 10 PM"
+  },
+  {
+    "id": 26,
+    "query": "What happens if a police officer refuses to file my FIR for a theft?",
+    "ground_truth_section": "Section 173 BNSS",
+    "category": "Police Procedure",
+    "expected_action": "Registered Post to SP / Magistrate complaint"
+  },
+  {
+    "id": 27,
+    "query": "What is the punishment for cheating or fraud in India?",
+    "ground_truth_section": "Section 318 BNS",
+    "category": "Criminal Law",
+    "expected_action": "Imprisonment up to 7 years"
+  },
+  {
+    "id": 28,
+    "query": "Can the police arrest a woman after sunset?",
+    "ground_truth_section": "Section 43 BNSS",
+    "category": "Women Rights",
+    "expected_action": "No arrest without woman officer + Magistrate permission"
+  },
+  {
+    "id": 29,
+    "query": "How many days can a person be kept in police custody before meeting a judge?",
+    "ground_truth_section": "Section 58 BNSS",
+    "category": "Arrest Rights",
+    "expected_action": "24 hours"
+  },
+  {
+    "id": 30,
+    "query": "My landlord is trying to evict me without notice. What can I do?",
+    "ground_truth_section": "Rent Control Act / Civil Procedure",
+    "category": "Civil Law",
+    "expected_action": "Injunction/Notice period required"
+  },
+  {
+    "id": 31,
+    "query": "What is the penalty for giving false evidence in court?",
+    "ground_truth_section": "Section 227 BNS",
+    "category": "Criminal Law",
+    "expected_action": "Imprisonment up to 7 years"
+  },
+  {
+    "id": 32,
+    "query": "If I buy a defective phone and the shop refuses a refund, where do I complain?",
+    "ground_truth_section": "Consumer Protection Act",
+    "category": "Consumer Rights",
+    "expected_action": "Consumer Forum / E-Daakhil"
+  },
+  {
+    "id": 33,
+    "query": "Is it legal to record a police officer at the station?",
+    "ground_truth_section": "Right to Information / Supreme Court Guidelines",
+    "category": "Civil Rights",
+    "expected_action": "Yes, legal unless restricted for security areas"
+  },
+  {
+    "id": 34,
+    "query": "What is the punishment for causing hurt by a dangerous weapon?",
+    "ground_truth_section": "Section 118 BNS",
+    "category": "Criminal Law",
+    "expected_action": "Up to 10 years imprisonment"
+  },
+  {
+    "id": 35,
+    "query": "Can I get a copy of my FIR for free?",
+    "ground_truth_section": "Section 173(2) BNSS",
+    "category": "Police Procedure",
+    "expected_action": "Yes, mandatory and free of cost"
+  },
+  {
+    "id": 36,
+    "query": "What to do if someone threatens me over the phone?",
+    "ground_truth_section": "Section 351 BNS",
+    "category": "Criminal Law",
+    "expected_action": "File FIR for Criminal Intimidation"
+  },
+  {
+    "id": 37,
+    "query": "What is the limit for filing a medical negligence case?",
+    "ground_truth_section": "Consumer Protection Act",
+    "category": "Consumer Rights",
+    "expected_action": "2 years from the date of cause"
+  },
+  {
+    "id": 38,
+    "query": "Can a police officer search my house without a warrant?",
+    "ground_truth_section": "Section 185 BNSS",
+    "category": "Police Procedure",
+    "expected_action": "Generally no, except in emergencies with recorded reasons"
+  },
+  {
+    "id": 39,
+    "query": "What is the right of a person to have a lawyer after arrest?",
+    "ground_truth_section": "Section 35 BNSS / Art 22 Constitution",
+    "category": "Arrest Rights",
+    "expected_action": "Immediate right to legal counsel"
+  },
+  {
+    "id": 40,
+    "query": "What is the maximum punishment for defamation?",
+    "ground_truth_section": "Section 356 BNS",
+    "category": "Criminal Law",
+    "expected_action": "2 years or fine or both"
+  },
+  {
+    "id": 41,
+    "query": "Is domestic violence only physical abuse?",
+    "ground_truth_section": "DV Act 2005",
+    "category": "Women Rights",
+    "expected_action": "Includes emotional, sexual, and economic abuse"
+  },
+  {
+    "id": 42,
+    "query": "What is the time limit for the police to file a chargesheet?",
+    "ground_truth_section": "Section 193 BNSS",
+    "category": "Police Procedure",
+    "expected_action": "Normally 60 to 90 days"
+  },
+  {
+    "id": 43,
+    "query": "Can I file an FIR for a crime that happened in another city?",
+    "ground_truth_section": "Zero FIR / Section 173 BNSS",
+    "category": "Police Procedure",
+    "expected_action": "Yes, Zero FIR"
+  },
+  {
+    "id": 44,
+    "query": "What is the punishment for rash driving?",
+    "ground_truth_section": "Section 281 BNS",
+    "category": "Criminal Law",
+    "expected_action": "Up to 6 months or fine"
+  },
+  {
+    "id": 45,
+    "query": "Do I have to pay GST on a bill without a GST number?",
+    "ground_truth_section": "GST Act",
+    "category": "Tax Law",
+    "expected_action": "No, illegal to collect without registration"
+  },
+  {
+    "id": 46,
+    "query": "What is the right to bail in a non-bailable offence?",
+    "ground_truth_section": "Section 480 BNSS",
+    "category": "Arrest Rights",
+    "expected_action": "Magistrate's discretion based on severity"
+  },
+  {
+    "id": 47,
+    "query": "How to claim insurance if a company rejects a valid claim?",
+    "ground_truth_section": "Insurance Ombudsman / Consumer Court",
+    "category": "Consumer Rights",
+    "expected_action": "Ombudsman filing or Consumer Forum"
+  },
+  {
+    "id": 48,
+    "query": "What is 'Adultery' status in new Indian law?",
+    "ground_truth_section": "Repealed Section 497 IPC / Not in BNS",
+    "category": "Criminal Law",
+    "expected_action": "Decriminalized (only civil ground for divorce)"
+  },
+  {
+    "id": 49,
+    "query": "Can I file a complaint against a judge?",
+    "ground_truth_section": "Judicial Inquiry Act",
+    "category": "Administrative Law",
+    "expected_action": "Complaint to High Court Registrar"
+  },
+  {
+    "id": 50,
+    "query": "What is the legal age of marriage for men and women?",
+    "ground_truth_section": "Child Marriage Act",
+    "category": "Family Law",
+    "expected_action": "21 for both (recent proposal) or 18F/21M (previous)"
+  }
+]

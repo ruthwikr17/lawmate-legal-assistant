@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "query": "What is the maximum rent increase allowed per year in Mumbai/Maharashtra?",
+    "ground_truth": "Section 11 Maharashtra Rent Control Act",
+    "expected_action": "Explain the 4% per annum cap for protected tenancies."
+  },
+  {
+    "id": 2,
+    "query": "In Bangalore, what are the working hours for shops and establishments?",
+    "ground_truth": "Karnataka Shops and Commercial Establishments Act",
+    "expected_action": "Mention the 9-hour daily and 48-hour weekly limits."
+  },
+  {
+    "id": 3,
+    "query": "Is professional tax mandatory for employees in Telangana?",
+    "ground_truth": "Telangana Tax on Professions Act",
+    "expected_action": "Confirm it is mandatory for income above 15,000 INR."
+  },
+  {
+    "id": 4,
+    "query": "What is the penalty for not registering a lease agreement in Delhi?",
+    "ground_truth": "Registration Act / Delhi Rent Control",
+    "expected_action": "Explain that the agreement becomes inadmissible in court as evidence."
+  },
+  {
+    "id": 5,
+    "query": "What is the notice period for terminating a tenant in West Bengal?",
+    "ground_truth": "West Bengal Premises Tenancy Act",
+    "expected_action": "Specify the 1-month notice period required under the Act."
+  }
+]

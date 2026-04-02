@@ -14,7 +14,10 @@ public class AIServiceClient {
     private String aiServiceUrl;
 
     public AIServiceClient() {
-        this.restTemplate = new RestTemplate();
+        org.springframework.http.client.SimpleClientHttpRequestFactory factory = new org.springframework.http.client.SimpleClientHttpRequestFactory();
+        factory.setConnectTimeout(5000);
+        factory.setReadTimeout(60000); // 60 seconds for OCR
+        this.restTemplate = new RestTemplate(factory);
     }
 
     public AIResponse chat(String query, List<Map<String, String>> history, Map<String, Object> context) {
@@ -37,10 +40,25 @@ public class AIServiceClient {
         String url = aiServiceUrl + "/analyze-doc";
         
         org.springframework.http.HttpHeaders headers = new org.springframework.http.HttpHeaders();
-        headers.setContentType(org.springframework.http.MediaType.MULTIPART_FORM_DATA);
+        // Do NOT set Content-Type manually for multipart, RestTemplate handles boundary automatically
         
         org.springframework.util.MultiValueMap<String, Object> body = new org.springframework.util.LinkedMultiValueMap<>();
-        body.add("file", file.getResource());
+        
+        try {
+            final String fileName = file.getOriginalFilename();
+            final byte[] bytes = file.getBytes();
+            
+            org.springframework.core.io.ByteArrayResource resource = new org.springframework.core.io.ByteArrayResource(bytes) {
+                @Override
+                public String getFilename() {
+                    return fileName;
+                }
+            };
+            
+            body.add("file", resource);
+        } catch (java.io.IOException e) {
+            throw new RuntimeException("Failed to read file for analysis", e);
+        }
         
         org.springframework.http.HttpEntity<org.springframework.util.MultiValueMap<String, Object>> requestEntity = 
             new org.springframework.http.HttpEntity<>(body, headers);

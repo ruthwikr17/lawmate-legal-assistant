@@ -93,9 +93,11 @@ export default function LegalWorkflows() {
 
   // Unified Failover Engine (V25)
   const unifiedFetch = async (endpoint, options) => {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080';
+    const fallbackUrl = process.env.NEXT_PUBLIC_AI_API_URL || 'http://localhost:8000';
     const urls = [
-      `http://localhost:8080/api/legal${endpoint}`, 
-      `http://localhost:8000${endpoint}`              
+      `${apiUrl}/api/legal${endpoint}`, 
+      `${fallbackUrl}${endpoint}`              
     ];
     let lastError = null;
     for (const url of urls) {

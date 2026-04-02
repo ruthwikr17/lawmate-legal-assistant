@@ -1,6 +1,4 @@
-# backend/main.py
-
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Optional, Tuple
@@ -20,6 +18,8 @@ print(f"DEBUG: GEMINI_API_KEY present: {'Yes' if os.getenv('GEMINI_API_KEY') els
 from backend.retrieval.retriever import LegalRetriever
 from backend.llm.generator import LegalGenerator
 from backend.rules.rule_engine import LegalRuleEngine
+from backend.utils.ocr_service import OCRService
+from backend.workflows.workflow_engine import WorkflowEngine
 
 app = FastAPI(title="LawMate AI Service", version="2.0.0")
 
@@ -32,16 +32,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-from fastapi import FastAPI, HTTPException, UploadFile, File
-from backend.utils.ocr_service import OCRService
-
 # Initialize Services
 retriever = LegalRetriever()
 generator = LegalGenerator()
 rule_engine = LegalRuleEngine()
 ocr_service = OCRService()
-
-from backend.workflows.workflow_engine import WorkflowEngine
 workflow_engine = WorkflowEngine()
 
 @app.get("/workflows")
@@ -56,24 +51,9 @@ async def get_workflow(workflow_id: str):
         raise HTTPException(status_code=404, detail="Workflow not found")
     return workflow
 
-@app.post("/analyze-doc")
-async def analyze_doc(file: UploadFile = File(...)):
-    try:
-        contents = await file.read()
-        extracted_text = ocr_service.extract_text_from_image(contents)
-        
-        if not extracted_text:
-            raise HTTPException(status_code=400, detail="Could not extract text from document.")
-            
-        analysis = ocr_service.analyze_document_risk(extracted_text)
-        # Map summary to analysis key for frontend consistency
-        return {
-            "analysis": analysis["summary"],
-            "detected_risks": analysis["detected_risks"],
-            "original_text": analysis["original_text"]
-        }
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+@app.get("/")
+async def root():
+    return {"message": "LawMate AI Service is online"}
 
 class ChatRequest(BaseModel):
     query: str
@@ -83,10 +63,6 @@ class ChatRequest(BaseModel):
 class ChatResponse(BaseModel):
     answer: str
     sources: List[dict]
-
-@app.get("/")
-async def root():
-    return {"message": "LawMate AI Service is online"}
 
 @app.post("/generate")
 async def generate(request: ChatRequest):
@@ -163,5 +139,26 @@ async def chat(request: ChatRequest):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+@app.post("/analyze-doc")
+async def analyze_doc(file: UploadFile = File(...)):
+    try:
+        # 1. Read file
+        contents = await file.read()
+        
+        # 2. Run OCR
+        extracted_text = ocr_service.extract_text(contents)
+        
+        if not extracted_text:
+            return {"answer": "LawMate could not read any text from this document. Please ensure the image is clear and well-lit."}
+            
+        # 3. Analyze Risk
+        risk_manifesto = generator.analyze_notice_risk(extracted_text)
+        
+        return {"answer": risk_manifesto}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    import os
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)

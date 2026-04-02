@@ -26,10 +26,10 @@ class LegalRetriever:
         print("Initializing LegalRetriever (Phase 1 Optimized)...")
         try:
             # Bi-Encoder for initial retrieval
-            self.bi_encoder = SentenceTransformer("all-mpnet-base-v2")
+            self.bi_encoder = SentenceTransformer("all-mpnet-base-v2", device="cpu")
                    
             # Cross-Encoder for high-precision reranking (Free & Local)
-            self.cross_encoder = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
+            self.cross_encoder = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2", device="cpu")
             
             # LLM Service for complex logic
             self.llm_service = LLMService()
@@ -110,7 +110,7 @@ class LegalRetriever:
                 
         return diversified
 
-    def retrieve(self, query: str, top_k: int = 20) -> List[Dict]:
+    def retrieve(self, query: str, top_k: int = 30) -> List[Dict]:
         print(f"Executing retrieval for: '{query}'")
         
         # 1. LLM-based Jurisdiction Detection

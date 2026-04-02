@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Send, User, Bot, Trash2, StopCircle, Bookmark, RefreshCw, Sparkles, AlertCircle, Shield, Copy, ChevronRight, MessageSquare, Plus } from 'lucide-react';
+import { Send, User, Bot, Trash2, StopCircle, Bookmark, RefreshCw, Sparkles, AlertCircle, Shield, Copy, ChevronRight, MessageSquare, Plus, Paperclip, FileText } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 
@@ -14,6 +14,7 @@ export default function AskAI({ initialQuery, setInitialQuery, activeChatId, set
   const abortControllerRef = useRef(null);
   const scrollRef = useRef(null);
   const hasSentInitialRef = useRef(false);
+  const fileInputRef = useRef(null);
 
   // Load chat history and title
   useEffect(() => {
@@ -99,7 +100,8 @@ export default function AskAI({ initialQuery, setInitialQuery, activeChatId, set
     abortControllerRef.current = new AbortController();
 
     try {
-      const response = await fetch('http://localhost:8080/api/legal/chat', {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080';
+      const response = await fetch(`${apiUrl}/api/legal/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -144,6 +146,73 @@ export default function AskAI({ initialQuery, setInitialQuery, activeChatId, set
     } finally {
       setIsLoading(false);
       abortControllerRef.current = null;
+    }
+  };
+
+  const handleAnalyzeNotice = async (file) => {
+    if (!file || isLoading) return;
+    
+    setIsLoading(true);
+    setError(null);
+    
+    const userMessage = { 
+      role: 'user', 
+      content: `Analyze this legal document: ${file.name}`, 
+      id: Date.now() 
+    };
+    
+    const newMessages = [...messages, userMessage];
+    setMessages(newMessages);
+    
+    let currentChatId = activeChatId;
+    if (!currentChatId) {
+      currentChatId = Date.now();
+      localStorage.setItem(`lawmate_chat_${currentChatId}`, JSON.stringify([userMessage]));
+      setActiveChatId(currentChatId);
+    }
+    
+    const formData = new FormData();
+    formData.append('file', file);
+    
+    try {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080';
+      const response = await fetch(`${apiUrl}/api/legal/analyze-doc`, {
+        method: 'POST',
+        body: formData,
+      });
+      
+      if (!response.ok) throw new Error('Document analysis failed');
+      const data = await response.json();
+      
+      const assistantMessage = {
+        role: 'assistant',
+        content: data.answer || "I'm sorry, I couldn't analyze this document.",
+        sources: []
+      };
+      
+      const updatedMessages = [...newMessages, assistantMessage];
+      setMessages(updatedMessages);
+      localStorage.setItem(`lawmate_chat_${currentChatId}`, JSON.stringify(updatedMessages));
+      
+      // Sync History for Sidebar (V72)
+      const fullHistory = JSON.parse(localStorage.getItem('lawmate_chat_history') || '[]');
+      const existingIdx = fullHistory.findIndex(h => h.id === currentChatId);
+      
+      if (existingIdx === -1) {
+        fullHistory.unshift({
+          id: currentChatId,
+          title: `Analysis: ${file.name}`,
+          updatedAt: new Date().toISOString()
+        });
+        localStorage.setItem('lawmate_chat_history', JSON.stringify(fullHistory.slice(0, 50)));
+        window.dispatchEvent(new Event('storage'));
+      }
+      
+    } catch (err) {
+      console.error('Analysis error:', err);
+      setError(`Notice Analysis Failed: ${err.message || 'Check connection'}. If PDF too large, try image.`);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -216,23 +285,66 @@ export default function AskAI({ initialQuery, setInitialQuery, activeChatId, set
                   {msg.role === 'assistant' && (
                     <div className="absolute top-0 left-0 w-1 h-full bg-[var(--accent-teal)] opacity-40"></div>
                   )}
-                  <ReactMarkdown 
-                    components={{
-                      p: ({node, ...props}) => <p className="mt-6 mb-6 last:mb-0 first:mt-0" {...props} />,
-                      h2: ({node, ...props}) => <h2 className="text-lg font-black mt-8 mb-4 text-[var(--accent-teal)] uppercase tracking-wider" {...props} />,
-                      h3: ({node, ...props}) => <h3 className="text-base font-black mt-6 mb-3 text-[var(--text-primary)]" {...props} />,
-                      ul: ({node, ...props}) => <ul className="space-y-3 mb-14 list-none" {...props} />,
-                      li: ({node, ...props}) => (
-                        <li className="flex gap-3 items-start" {...props}>
-                          <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-teal)] mt-2 shrink-0" />
-                          <span>{props.children}</span>
-                        </li>
-                      ),
-                      strong: ({node, ...props}) => <strong className="font-black text-[var(--accent-teal)]" {...props} />,
-                    }}
-                  >
-                    {msg.content}
-                  </ReactMarkdown>
+                  <div className={`flex flex-col ${msg.role === 'assistant' && msg.sources && msg.sources.length > 0 ? 'xl:flex-row gap-10' : ''}`}>
+                    {/* Main Content Column */}
+                    <div className="flex-1">
+                      <ReactMarkdown 
+                        components={{
+                          p: ({node, ...props}) => <p className="mt-6 mb-6 last:mb-0 first:mt-0" {...props} />,
+                          h2: ({node, ...props}) => <h2 className="text-lg font-black mt-8 mb-4 text-[var(--accent-teal)] uppercase tracking-wider" {...props} />,
+                          h3: ({node, ...props}) => <h3 className="text-base font-black mt-6 mb-3 text-[var(--text-primary)]" {...props} />,
+                          ul: ({node, ...props}) => <ul className="space-y-3 mb-14 list-none" {...props} />,
+                          li: ({node, ...props}) => (
+                            <li className="flex gap-3 items-start" {...props}>
+                              <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-teal)] mt-2 shrink-0" />
+                              <span>{props.children}</span>
+                            </li>
+                          ),
+                          strong: ({node, ...props}) => <strong className="font-black text-[var(--accent-teal)]" {...props} />,
+                        }}
+                      >
+                        {msg.content}
+                      </ReactMarkdown>
+                    </div>
+
+                    {/* Right-Side Citations Pane */}
+                    {msg.role === 'assistant' && msg.sources && msg.sources.length > 0 && (
+                      <div className="w-full xl:w-72 shrink-0 border-t xl:border-t-0 xl:border-l border-[var(--border-light)]/40 pt-6 xl:pt-0 xl:pl-8">
+                        <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-[var(--accent-teal)] mb-5 flex items-center gap-2">
+                          <Bookmark size={14} /> Official Legal Anchors
+                        </h4>
+                        <div className="flex flex-col gap-4">
+                          {msg.sources.map((src, i) => (
+                            <div key={i} className="group flex flex-col bg-[var(--bg-app)]/30 border border-[var(--border-light)] hover:border-[var(--accent-teal)]/40 hover:shadow-md transition-all p-4 rounded-2xl gap-3">
+                              
+                              <div className="flex flex-col gap-1.5">
+                                <div className="flex items-center gap-2">
+                                  <div className="w-1.5 h-1.5 rounded-sm bg-[var(--text-muted)] opacity-50"></div>
+                                  <span className="text-[10px] font-black uppercase text-[var(--text-muted)] tracking-wider">Governed by:</span>
+                                </div>
+                                <div className="pl-4 border-l-2 border-[var(--border-light)] ml-0.5 mb-1 mt-1">
+                                  <span className="text-[12px] font-black text-[var(--text-primary)] tracking-wide">{src.title}</span>
+                                </div>
+                              </div>
+                              
+                              {src.section && src.section !== 'N/A' && (
+                                <div className="flex flex-col gap-2 mt-1 pt-3 border-t border-[var(--border-light)]/50">
+                                  <div className="flex items-center gap-2">
+                                    <div className="w-1.5 h-1.5 rounded-sm bg-[var(--accent-teal)] opacity-80 shadow-[0_0_8px_var(--accent-teal)]"></div>
+                                    <span className="text-[10px] font-black uppercase text-[var(--text-muted)] tracking-wider">Relevant Section</span>
+                                  </div>
+                                  <div className="pl-4 border-l-2 border-[var(--accent-teal)]/40 ml-0.5 mt-1">
+                                    <span className="text-[12px] font-bold text-[var(--accent-teal)] leading-relaxed">{src.section}</span>
+                                  </div>
+                                </div>
+                              )}
+
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
 
                   {msg.role === 'assistant' && !msg.isStopped && (
                     <div className="flex items-center gap-6 mt-8 pt-5 border-t border-[var(--border-light)]/30">
@@ -299,6 +411,20 @@ export default function AskAI({ initialQuery, setInitialQuery, activeChatId, set
         <div className="max-w-2xl mx-auto relative group pointer-events-auto">
           <div className="absolute -inset-0.5 bg-gradient-to-r from-[var(--accent-teal)] to-blue-600 rounded-[2.5rem] opacity-0 blur-md group-focus-within:opacity-10 transition-opacity"></div>
           <div className="relative border border-[var(--border-light)] flex items-center p-1.5 bg-[var(--bg-panel)] rounded-[2.5rem] shadow-2xl">
+            <input 
+              type="file" 
+              ref={fileInputRef} 
+              className="hidden" 
+              accept="image/*,.pdf"
+              onChange={(e) => handleAnalyzeNotice(e.target.files[0])}
+            />
+            <button 
+              onClick={() => fileInputRef.current.click()}
+              className="p-3 ml-2 text-[var(--text-muted)] hover:text-[var(--accent-teal)] transition-colors active:scale-95"
+              title="Upload Legal Notice"
+            >
+              <Paperclip size={20} />
+            </button>
             <textarea 
               rows={1}
               placeholder="Ask anything about Indian Law..."

@@ -89,11 +89,8 @@ export default function Sidebar({ activeTab, setActiveTab, isCollapsed, setIsCol
               initial={{ opacity: 0 }} 
               animate={{ opacity: 1 }} 
               exit={{ opacity: 0 }}
-              className="flex items-center gap-2 overflow-hidden whitespace-nowrap"
+              className="flex items-center overflow-hidden whitespace-nowrap"
             >
-              <div className="w-8 h-8 rounded bg-[var(--accent-teal)] flex items-center justify-center font-bold text-[var(--text-inverse)] flex-shrink-0">
-                L
-              </div>
               <span className="font-bold text-lg tracking-tight text-[var(--text-primary)]">LawMate</span>
             </motion.div>
           )}
