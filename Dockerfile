@@ -27,10 +27,9 @@ COPY db/ ./db/
 # Optional: Add any static scripts/models if necessary
 # COPY storage/ ./storage/
 
-# Expose port (HF Spaces defaults to 7860, Render uses PORT env var)
-# We read the OS PORT in main.py directly.
+# Expose port (HF Spaces defaults to 7860)
 EXPOSE 7860
-EXPOSE 8000
+ENV PORT=7860
 
 # Start the FastAPI server using the backend module
 CMD ["python", "backend/main.py"]
