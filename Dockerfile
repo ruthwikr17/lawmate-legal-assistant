@@ -19,10 +19,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the backend code
 COPY backend/ ./backend/
 
-# IMPORTANT: Copy the built ChromaDB folder into the Docker image!
-# This ensures HuggingFace Spaces boots instantly with pre-loaded vectors
-# without losing data on ephemeral restarts.
-COPY db/ ./db/
+# IMPORTANT: The local database is 1.9 GB, which is too large for GitHub/Hugging Face
+# without Git LFS. We will let ChromaDB initialize a fresh, empty vector store on boot.
+RUN mkdir -p db/
+# COPY db/ ./db/
 
 # Optional: Add any static scripts/models if necessary
 # COPY storage/ ./storage/
