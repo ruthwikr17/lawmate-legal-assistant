@@ -1,4 +1,5 @@
 /Users/ruthvik/Files/Learning/Projects/LawMate/lawmate/java-backend/src/main/java/com/lawmate/backend/BackendApplication.java
+/Users/ruthvik/Files/Learning/Projects/LawMate/lawmate/java-backend/src/main/java/com/lawmate/backend/controller/AuthController.java
 /Users/ruthvik/Files/Learning/Projects/LawMate/lawmate/java-backend/src/main/java/com/lawmate/backend/controller/LegalChatController.java
 /Users/ruthvik/Files/Learning/Projects/LawMate/lawmate/java-backend/src/main/java/com/lawmate/backend/controller/UserRightsController.java
 /Users/ruthvik/Files/Learning/Projects/LawMate/lawmate/java-backend/src/main/java/com/lawmate/backend/model/LawGist.java
@@ -6,4 +7,5 @@
 /Users/ruthvik/Files/Learning/Projects/LawMate/lawmate/java-backend/src/main/java/com/lawmate/backend/repository/LawGistRepository.java
 /Users/ruthvik/Files/Learning/Projects/LawMate/lawmate/java-backend/src/main/java/com/lawmate/backend/repository/UserRepository.java
 /Users/ruthvik/Files/Learning/Projects/LawMate/lawmate/java-backend/src/main/java/com/lawmate/backend/service/AIServiceClient.java
+/Users/ruthvik/Files/Learning/Projects/LawMate/lawmate/java-backend/src/main/java/com/lawmate/backend/service/AuthService.java
 /Users/ruthvik/Files/Learning/Projects/LawMate/lawmate/java-backend/src/main/java/com/lawmate/backend/service/UserRightsService.java

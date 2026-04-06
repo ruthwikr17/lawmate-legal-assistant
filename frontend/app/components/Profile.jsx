@@ -3,14 +3,17 @@
 import React, { useState, useEffect } from 'react';
 import { User, Mail, MapPin, Calendar, Shield, Edit2, LogOut, Clock, Search, ChevronRight, Save, X, Camera, Info } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useAuth } from '../context/AuthContext';
 
 export default function Profile({ setActiveTab, setActiveChatId, handleAskAI }) {
+  const { user: authUser, logout } = useAuth();
+  
   const [user, setUser] = useState({
-    name: 'Ruthvik',
-    email: 'ruthvik@example.com',
-    location: 'Hyderabad, Telangana',
-    joinedDate: 'March 2024',
-    gender: 'Male'
+    name: authUser?.fullName || 'Citizen',
+    email: authUser?.email || '',
+    location: 'India',
+    joinedDate: authUser?.createdAt ? new Date(authUser.createdAt).toLocaleDateString() : 'Today',
+    gender: 'N/A'
   });
 
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -19,14 +22,6 @@ export default function Profile({ setActiveTab, setActiveChatId, handleAskAI }) 
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    // Load from localStorage
-    const savedProfile = localStorage.getItem('lawmate_user_profile');
-    if (savedProfile) {
-      const parsed = JSON.parse(savedProfile);
-      setUser(parsed);
-      setEditForm(parsed);
-    }
-    
     const savedHistory = JSON.parse(localStorage.getItem('lawmate_chat_history') || '[]');
     setHistory(savedHistory);
   }, []);
@@ -176,7 +171,7 @@ export default function Profile({ setActiveTab, setActiveChatId, handleAskAI }) 
 
         {/* Danger Zone */}
         <section className="flex justify-center pt-8">
-           <button className="flex items-center gap-3 text-red-500 font-bold uppercase tracking-widest text-xs hover:text-red-400 transition-colors p-4 rounded-2xl hover:bg-red-500/5">
+           <button onClick={logout} className="flex items-center gap-3 text-red-500 font-bold uppercase tracking-widest text-xs hover:text-red-400 transition-colors p-4 rounded-2xl hover:bg-red-500/5">
               <LogOut size={16} /> Sign out of LawMate
            </button>
         </section>

@@ -9,8 +9,11 @@ import RightsAwareness from './components/RightsAwareness';
 import LegalWorkflows from './components/LegalWorkflows';
 import Settings from './components/Settings';
 import Profile from './components/Profile';
+import Auth from './components/Auth';
+import { AuthProvider, useAuth } from './context/AuthContext';
 
 function AppContent() {
+  const { user } = useAuth();
   const [activeTab, setActiveTab] = useState('dashboard');
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [initialAskQuery, setInitialAskQuery] = useState('');
@@ -49,6 +52,10 @@ function AppContent() {
     }
   };
 
+  if (!user) {
+    return <Auth />;
+  }
+
   return (
     <div className="app-layout">
       <Sidebar 
@@ -69,8 +76,10 @@ function AppContent() {
 
 export default function Page() {
   return (
-    <PersonaProvider>
-      <AppContent />
-    </PersonaProvider>
+    <AuthProvider>
+      <PersonaProvider>
+        <AppContent />
+      </PersonaProvider>
+    </AuthProvider>
   );
 }
