@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { useAuth } from './AuthContext';
 
 const PersonaContext = createContext();
 
@@ -14,16 +15,22 @@ export const personas = [
 ];
 
 export function PersonaProvider({ children }) {
+  const { user } = useAuth();
   const [activePersona, setActivePersona] = useState(personas[0]); // default
   
-  // Persist persona in localStorage (optional but good UX)
+  // Sync with Auth user on load
   useEffect(() => {
-    const saved = localStorage.getItem('lawmate_persona');
-    if (saved) {
-      const found = personas.find(p => p.id === saved);
-      if (found) setActivePersona(found);
+    if (user?.primaryProfile) {
+      const match = personas.find(p => p.id.toUpperCase() === user.primaryProfile.toUpperCase());
+      if (match) setActivePersona(match);
+    } else {
+      const saved = localStorage.getItem('lawmate_persona');
+      if (saved) {
+        const found = personas.find(p => p.id === saved);
+        if (found) setActivePersona(found);
+      }
     }
-  }, []);
+  }, [user]);
 
   const changePersona = (personaId) => {
     const found = personas.find(p => p.id === personaId);

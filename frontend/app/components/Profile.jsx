@@ -4,9 +4,11 @@ import React, { useState, useEffect } from 'react';
 import { User, Mail, MapPin, Calendar, Shield, Edit2, LogOut, Clock, Search, ChevronRight, Save, X, Camera, Info } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
+import { usePersona } from '../context/PersonaContext';
 
 export default function Profile({ setActiveTab, setActiveChatId, handleAskAI }) {
   const { user: authUser, logout } = useAuth();
+  const { activePersona } = usePersona();
   
   const [user, setUser] = useState({
     name: authUser?.fullName || 'Citizen',
@@ -77,7 +79,7 @@ export default function Profile({ setActiveTab, setActiveChatId, handleAskAI }) 
                   <Edit2 size={16} /> Edit Profile
                 </button>
                 <div className="px-6 py-3 bg-[var(--bg-panel)] border border-[var(--border-light)] rounded-2xl text-[11px] font-bold uppercase tracking-widest text-[var(--text-muted)] flex items-center gap-2">
-                  <Shield size={14} className="text-[var(--accent-teal)]" /> Verified Citizen
+                  <Shield size={14} className="text-[var(--accent-teal)]" /> Verified {activePersona.label}
                 </div>
               </div>
             </div>
