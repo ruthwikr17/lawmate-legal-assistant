@@ -1,11 +1,3 @@
----
-title: Lawmate AI
-emoji: ⚖️
-colorFrom: blue
-colorTo: indigo
-sdk: docker
-pinned: false
----
 # LawMate — Hybrid AI Legal Intelligence
 AI-powered legal assistant using RAG + rule-based reasoning for accurate legal guidance.
 
