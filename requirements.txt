@@ -17,3 +17,4 @@ google-api-core
 grpcio
 pyyaml
 tqdm
+huggingface-hub

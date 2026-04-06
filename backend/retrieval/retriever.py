@@ -34,6 +34,22 @@ class LegalRetriever:
             # LLM Service for complex logic
             self.llm_service = LLMService()
             
+            # --- START DYNAMIC DATABASE DOWNLOAD ---
+            db_file = PERSIST_DIR / "chroma.sqlite3"
+            if not db_file.exists():
+                print("Local ChromaDB missing. Downloading exactly 1.9GB from Hugging Face Datasets...")
+                try:
+                    from huggingface_hub import snapshot_download
+                    snapshot_download(
+                        repo_id="Ruthvik17/lawmate-db",
+                        repo_type="dataset",
+                        local_dir=str(PERSIST_DIR)
+                    )
+                    print("Successfully downloaded LawMate vector DB from HF Hub!")
+                except Exception as down_e:
+                    print(f"Warning: Failed to download dataset. Booting with empty DB. {down_e}")
+            # --- END DYNAMIC DATABASE DOWNLOAD ---
+
             # ChromaDB client
             self.client = chromadb.Client(
                 Settings(persist_directory=str(PERSIST_DIR), is_persistent=True)
