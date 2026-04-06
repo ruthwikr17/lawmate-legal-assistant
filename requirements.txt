@@ -18,3 +18,6 @@ grpcio
 pyyaml
 tqdm
 huggingface-hub
+easyocr
+PyMuPDF
+opencv-python-headless

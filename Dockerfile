@@ -4,9 +4,11 @@ FROM python:3.10-slim
 # Set working directory
 WORKDIR /app
 
-# Install system dependencies (needed for sentence-transformers, HNSW, PyTorch if necessary)
+# Install system dependencies (needed for sentence-transformers, HNSW, OpenCV, PyTorch)
 RUN apt-get update && apt-get install -y \
     build-essential \
+    libgl1 \
+    libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy the requirements file from the root directory level
