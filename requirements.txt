@@ -20,4 +20,6 @@ tqdm
 huggingface-hub
 easyocr
 PyMuPDF
-opencv-python-headless
+opencv-python-headlessnumpy<2
+spacy
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz
