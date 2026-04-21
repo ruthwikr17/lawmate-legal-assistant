@@ -8,11 +8,11 @@
 		<version>3.2.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.lawmate</groupId>
+	<groupId>com.ALRS</groupId>
 	<artifactId>backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>lawmate-backend</name>
-	<description>Primary Backend for LawMate Legal Assistant</description>
+	<name>ALRS-backend</name>
+	<description>Primary Backend for ALRS Legal Assistant</description>
 	<properties>
 		<java.version>21</java.version>
 	</properties>
